@@ -4,7 +4,7 @@
   "modules-center": ["clock"],
   "modules-right": ["network", "pulseaudio", "battery"],
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -22,16 +22,7 @@
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": "{time}"
   },
-//  "network": {
-//    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-//    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰈁  </span> {ipaddr}",
-//    "format-linked": "{ifname} (No IP) ",
-//    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-//    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
-//    "tooltip-format-ethernet": "{ifname}\nIP: {ipaddr}"
-//  },
 "network": {
-//	"interface": "wlp2s0",
 	"format": "{ifname}",
 	"format-wifi": "<span size='13000' foreground='#B1E3AD'> </span> {essid} ({signalStrength}%)",
 	"format-ethernet": "<span size='13000' foreground='#B1E3AD'> </span> {ipaddr}",
