@@ -20,7 +20,9 @@
 
   "clock": {
     "format": "  {:%H:%M    %d/%m/%Y}",
-    "tooltip-format": "{:%A, %d de %B de %Y}"
+    "tolltip": true,
+    "on-hover": "cal",
+    "tooltip-format": "{calendar}"
   },
 
   "cpu": {
