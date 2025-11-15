@@ -19,36 +19,51 @@
   },
 
   "clock": {
-    "format": "  {:%H:%M    %d/%m/%Y}",
+    "format": " {:%H:%M    %d/%m/%Y}",
     "tolltip": true,
     "on-hover": "cal",
     "tooltip-format": "{calendar}"
   },
 
   "cpu": {
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "interval": 2
   },
 
   "memory": {
-    "format": "  {used:0.1f}G",
+    "format": " {used:0.1f}G",
     "interval": 5
   },
 
   "network": {
-    "format-wifi": "  {essid} ({signalStrength}%)",
-    "format-ethernet": "󰈁  {ifname}",
-    "format-disconnected": "󰤭  desconectado",
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": "󰈁 {ifname}",
+    "format-disconnected": "󰤭 desconectado",
     "tooltip-format": "{ifname} - {ipaddr}"
   },
 
+  //"pulseaudio": {
+  //  "format": "{icon}  {volume}%",
+  //  "format-icons": {
+  //    "default": ["", "", ""]
+  //  },
+  //  "scroll-step": 5,
+  // "on-click": "pavucontrol",
+  //  "swap-icon-label": true
+  //},
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon} {volume}%",
+    "format-muted": " Muted",
     "format-icons": {
       "default": ["", "", ""]
     },
-    "scroll-step": 5,
-    "on-click": "pavucontrol"
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-middle": "pavucontrol",
+    "swap-icon-label": true
   },
 
     "tray": {
