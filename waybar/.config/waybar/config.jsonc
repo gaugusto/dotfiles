@@ -1,7 +1,7 @@
 {
   // Configuração minimalista do Waybar
   "layer": "top",
-  "height": 28,
+  "height": 30,
   "modules-left": [
     "hyprland/workspaces"
   ],
@@ -27,9 +27,9 @@
 
   "network": {
     "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "󰈁  {ip}",
-    "format-disconnected": "󰖪",
-    "tooltip": false
+    "format-ethernet": "󰈁 {ipaddr}",
+    "format-disconnected": "󰖪 ",
+    "on-click": false
   },
 
   "battery": {
@@ -54,7 +54,7 @@
   "clock": {
     "format": "  {:%Y/%m/%d    %H:%M}",
     "locale": "pt_BR.UTF-8",
-    "tooltip-format": "{calendar}"
+    "tooltip-format": "<tt>{calendar}</tt>"
   }
 }
 
