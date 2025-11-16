@@ -81,3 +81,8 @@
 #clock {
     font-weight: bold;
 }
+
+#cpu {
+    padding: 0 10px;
+    font-weight: bold;
+}
