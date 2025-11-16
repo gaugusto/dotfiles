@@ -1,128 +1,83 @@
-@import "mocha.css"; 
+/* Paleta Minimalista Escura (Monokai-like) */
+@define-color base-dark   #282C34; /* Fundo principal */
+@define-color fg-light    #ABB2BF; /* Foreground/Texto */
+@define-color accent-blue #61AFEF; /* Destaque */
+@define-color warn-red    #E06C75; /* Aviso/Crítico */
+@define-color good-green  #98C379; /* Bom */
 
-* {
-    font-family: "MesloLGSDZ Nerd Font Mono", monospace;
-    min-height: 0;
-    font-weight: bold;
-    font-size: 16px;
+
+/* ------------------------------------------------------------- */
+/* ESTILO GERAL DA WAYBAR */
+/* ------------------------------------------------------------- */
+#waybar {
+    background-color: rgba(40, 44, 52, 0.9); /* base-dark com 90% de opacidade */
+    color: @fg-light;
+    font-family: "JetBrainsMono Nerd Font", monospace; /* Recomenda-se Nerd Font para ícones */
+    font-size: 14px;
+    border-radius: 0; /* Barras minimalistas geralmente não têm bordas arredondadas */
+    border-bottom: 2px solid @accent-blue; /* Uma linha fina de destaque na parte inferior */
 }
 
-window#waybar {
-    background: transparent;
-    background-color: @crust;
-    color: @overlay0;
-    transition-property: background-color;
-    transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+/* ------------------------------------------------------------- */
+/* ESTILO GERAL DOS MÓDULOS */
+/* ------------------------------------------------------------- */
+#waybar .module {
+    padding: 0 10px; /* Espaçamento interno em cada módulo */
+    transition: all 0.5s;
 }
 
-#window {
-    margin: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-}
+/* ------------------------------------------------------------- */
+/* ESTILOS ESPECÍFICOS DE MÓDULOS */
+/* ------------------------------------------------------------- */
 
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
-}
-
-button:hover {
-    background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
-}
-
+/* Workspaces */
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 5px;
+    color: @fg-light;
+    background-color: transparent;
+    border-bottom: 2px solid transparent; /* Para dar espaço ao destaque */
 }
 
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
-}
-
+/* Workspace Ativo (destaque azul discreto) */
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @accent-blue;
+    border-bottom: 2px solid @accent-blue;
 }
 
-#workspaces button.urgent {
-    background-color: #eb4d4b;
+/* Hover/Focus (se quiser um feedback visual) */
+#workspaces button:hover {
+    box-shadow: none;
+    background-color: rgba(97, 175, 239, 0.1); /* Um toque de azul transparente */
 }
 
-#pulseaudio,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#wireplumber,
-#tray,
-#network,
-#mode,
-#scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
-  font-size: 16px;
+/* Título da Janela */
+#window {
+    font-style: italic;
+    font-weight: bold;
 }
 
+/* Volume */
+#pulseaudio.muted {
+    color: @warn-red;
+}
+
+/* Bateria */
+#battery.charging {
+    color: @good-green;
+}
+#battery.warning {
+    color: #FAC863; /* Amarelo Laranja */
+}
+#battery.critical {
+    color: @warn-red;
+}
+
+/* Rede */
+#network.disconnected {
+    color: @warn-red;
+}
+
+/* Relógio */
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
-}
-
-#clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
-}
-
-#pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
-}
-
-#network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
-}
-
-#idle_inhibitor {
-    margin-right: 12px;
-    color: #7cb342;
-}
-
-#idle_inhibitor.activated {
-    color: @red;
-}
-
-#battery {
-    color: @green;
-    border-bottom: 2px solid @green;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
-}
-
-#custom-vpn {
-    color: @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
+    font-weight: bold;
 }
