@@ -54,7 +54,21 @@
   "clock": {
     "format": "  {:%Y/%m/%d    %H:%M}",
     "locale": "pt_BR.UTF-8",
-    "tooltip-format": "<tt>{calendar}</tt>"
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode"
+    },
+    "actions": {
+		  "on-click-right": "mode",
+		  "on-click-forward": "tz_up",
+		  "on-click-backward": "tz_down",
+		  "on-scroll-up": "shift_up",
+		  "on-scroll-down": "shift_down"
+	  }
   }
 }
 
