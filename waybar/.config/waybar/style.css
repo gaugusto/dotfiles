@@ -1,88 +1,78 @@
-/* Paleta Minimalista Escura (Monokai-like) */
-@define-color base-dark   #282C34; /* Fundo principal */
-@define-color fg-light    #ABB2BF; /* Foreground/Texto */
-@define-color accent-blue #61AFEF; /* Destaque */
-@define-color warn-red    #E06C75; /* Aviso/Crítico */
-@define-color good-green  #98C379; /* Bom */
+@import "mocha.css";
 
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 17px;
+  min-height: 0;
+}
 
-/* ------------------------------------------------------------- */
-/* ESTILO GERAL DA WAYBAR */
-/* ------------------------------------------------------------- */
 #waybar {
-    background-color: rgba(40, 44, 52, 0.9); /* base-dark com 90% de opacidade */
-    color: @fg-light;
-    font-family: "JetBrainsMono Nerd Font", monospace; /* Recomenda-se Nerd Font para ícones */
-    font-size: 14px;
-    border-radius: 0; /* Barras minimalistas geralmente não têm bordas arredondadas */
-    border-bottom: 2px solid @accent-blue; /* Uma linha fina de destaque na parte inferior */
+  background: transparent;
+  color: @text;
+  margin: 0px 0px;
 }
 
-/* ------------------------------------------------------------- */
-/* ESTILO GERAL DOS MÓDULOS */
-/* ------------------------------------------------------------- */
-#waybar .module {
-    padding: 0 10px; /* Espaçamento interno em cada módulo */
-    transition: all 0.5s;
+#cpu,
+#network,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#workspaces {
+  background-color: @surface0;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0.5rem;
 }
 
-/* ------------------------------------------------------------- */
-/* ESTILOS ESPECÍFICOS DE MÓDULOS */
-/* ------------------------------------------------------------- */
+#workspaces {
+  color: @blue;
+}
 
-/* Workspaces */
 #workspaces button {
-    padding: 0 5px;
-    color: @fg-light;
-    background-color: transparent;
-    border-bottom: 2px solid transparent; /* Para dar espaço ao destaque */
+  color: @lavender;
+  background: transparent;
+  border: 0;
 }
 
-/* Workspace Ativo (destaque azul discreto) */
 #workspaces button.active {
-    color: @accent-blue;
-    border-bottom: 2px solid @accent-blue;
+  color: @sky;
 }
 
-/* Hover/Focus (se quiser um feedback visual) */
 #workspaces button:hover {
-    box-shadow: none;
-    background-color: rgba(97, 175, 239, 0.1); /* Um toque de azul transparente */
+  color: @peach;
 }
 
-/* Título da Janela */
-#window {
-    font-style: italic;
-    font-weight: bold;
-}
-
-/* Volume */
-#pulseaudio.muted {
-    color: @warn-red;
-}
-
-/* Bateria */
-#battery.charging {
-    color: @good-green;
-}
-#battery.warning {
-    color: #FAC863; /* Amarelo Laranja */
-}
-#battery.critical {
-    color: @warn-red;
-}
-
-/* Rede */
-#network.disconnected {
-    color: @warn-red;
-}
-
-/* Relógio */
 #clock {
-    font-weight: bold;
+  color: @sapphire;
 }
 
-#cpu {
-    padding: 0 10px;
-    font-weight: bold;
+#battery {
+  color: @green;
 }
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight, #battery {
+  color: @rosewater;
+}
+
+#pulseaudio {
+  color: @flamingo;
+}
+
+#network {
+  color: @teal;
+}
+
