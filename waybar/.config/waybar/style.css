@@ -20,7 +20,7 @@
 #battery,
 #pulseaudio,
 #workspaces {
-  background-color: @surface0;
+  background-color: @mantle;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
   margin: 0.5rem 0.5rem;
@@ -30,18 +30,23 @@
   color: @blue;
 }
 
+#workspaces button.urgent { 
+  border: 2px solid red;
+}
+
 #workspaces button {
   color: @lavender;
-  background: transparent;
-  border: 0;
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @green;
 }
 
+#workspaces button.focused, 
 #workspaces button:hover {
-  color: @peach;
+  border-radius: 1rem;
+  background: @crust;
+  border-color: @blue;
 }
 
 #clock {
