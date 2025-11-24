@@ -37,7 +37,7 @@
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @peach;
 }
 
 #workspaces button:hover {
