@@ -58,7 +58,7 @@
   },
 
   "clock": {
-    "format": "  {:%Y/%m/%d    %H:%M}",
+    "format": "  {:%d/%m/%Y    %H:%M}",
     "locale": "pt_BR.UTF-8",
     "tooltip-format": "<tt>{calendar}</tt>"
   },

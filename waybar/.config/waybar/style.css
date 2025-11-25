@@ -20,14 +20,19 @@
 #battery,
 #pulseaudio,
 #workspaces {
-  background-color: @mantle;
+  background-color: @crust;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
   margin: 0.5rem 0.5rem;
 }
 
+#clock {
+  color: @maroon;
+}
+
+
 #workspaces {
-  color: @blue;
+  color: @peach;
 }
 
 #workspaces button.urgent { 
@@ -35,22 +40,18 @@
 }
 
 #workspaces button {
-  color: @lavender;
+  color: @surface2;
 }
 
 #workspaces button.active {
-  color: @green;
+  color: @yellow;
 }
 
 #workspaces button.focused, 
 #workspaces button:hover {
   border-radius: 1rem;
-  background: @crust;
+  background: @mantle;
   border-color: @blue;
-}
-
-#clock {
-  color: @sapphire;
 }
 
 #battery {
@@ -73,11 +74,15 @@
   color: @rosewater;
 }
 
-#pulseaudio {
-  color: @flamingo;
+#cpu {
+  color: @green;
 }
 
 #network {
   color: @teal;
+}
+
+#pulseaudio {
+  color: @sky;
 }
 
