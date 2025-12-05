@@ -1,72 +1,113 @@
 {
-  // Configuração minimalista do Waybar
-  "layer": "top",
-  "height": 30,
+  "position": "top",
+  "margin-top": 15,
   "modules-left": [
-    //hyprland/workspaces"
-    "clock"
+    "clock",
+    "hyprland/workspaces"
   ],
   "modules-center": [
-     "hyprland/workspaces"
+    "tray"
   ],
   "modules-right": [
-    "cpu",
+    "pulseaudio",
     "network",
     "battery",
-    "pulseaudio"
+    "custom/notification"
   ],
-
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "active": ""
-    }
-  },
-
-  "network": {
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "󰈁 {ipaddr}",
-    "format-disconnected": "󰖪 ",
-    "on-click": false
-  },
-
-  "battery": {
-    "states": {
-        "warning": 30,
-        "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-full": "  {capacity}%",
-    "format-icons": [" ", " ", " ", " ", " "]
-  },
-
-  "pulseaudio": {
-    "format": "  {volume}%",
-    "format-muted": "  mute",
-    "tooltip": false
-  },
-
   "clock": {
-    "format": "  {:%d/%m/%Y    %H:%M}",
-    "locale": "pt_BR.UTF-8",
-    "tooltip-format": "<tt>{calendar}</tt>"
+    "interval": 60,
+    "tooltip": true,
+    "format": "{:%d-%m-%Y - %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
   },
-  "cpu": {
-        "format": "  {usage}%",
-        "tooltip": true,
-        "interval": 2
+  "hyprland/workspaces": {
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 5 // 5 workspaces by default on every monitor
     }
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": [
+      "Easy Effects Sink"
+    ]
+  },
+  "network": {
+    "interface": "wlp0s20f3",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "max-length": 25
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
 }
-
