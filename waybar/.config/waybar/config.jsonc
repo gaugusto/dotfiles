@@ -10,6 +10,8 @@
   ],
   "modules-right": [
     "pulseaudio",
+    "power-profiles-daemon",
+    "cpu",
     "network",
     "battery",
     "custom/notification"
@@ -111,5 +113,23 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  "cpu": {
+    "interval": 10,
+	  "format": "{}% ",
+	  "max-length": 10
   }
 }
+
+
