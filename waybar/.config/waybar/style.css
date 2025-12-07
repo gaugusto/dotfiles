@@ -19,13 +19,14 @@ window#waybar {
 
 tooltip {
   background: @bg0;
-  border: 1px solid @bg3;
+  border: 2px solid @bg3;
   border-radius: 12px;
 }
 
 tooltip label {
   color: @fg;
   padding: 6px;
+  font-size: 16px;
 }
 
 #workspaces {

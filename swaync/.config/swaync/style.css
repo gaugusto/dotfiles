@@ -1,9 +1,11 @@
+@import "../waybar/one-dark.css"; 
+
 :root {
   --border-radius: 22px;
   --cc-bg: transparent;
 
-  --widget-background: rgba(46, 46, 46, 0.7);
-  --noti-bg-alpha: 0.6;
+  --widget-background: @bg1;
+  --noti-bg-alpha: 0.95;
 
   --padding: calc(var(--border-radius) / 2);
 }
@@ -45,7 +47,7 @@
   margin-top: var(--padding);
 }
 .widget-mpris > box > button:hover {
-  background: rgba(46, 46, 46, 1);
+  background: @bg1;
 }
 .widget-mpris-player {
   box-shadow: none;
