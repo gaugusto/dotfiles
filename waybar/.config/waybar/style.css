@@ -24,7 +24,7 @@ tooltip {
 }
 
 tooltip label {
-  color: @fg0;
+  color: @grey2;
   padding: 6px;
   font-size: 13px;
 }
@@ -34,8 +34,8 @@ tooltip label {
   padding: 5px 3px;
   margin: 0 0 0 12px;
   border-radius: 18px;
-  border: 2px solid @bg3;
-  color: @fg0;
+  border: 1px solid @grey2;
+  color: @grey2;
 }
 
 #workspaces button {
@@ -83,24 +83,24 @@ tooltip label {
   padding: 0 15px 0 15px;
   margin: 0 0 0 12px;
   border-radius: 45px;
-  border: 2px solid @bg3;
+  border: 1px solid @grey2;
 }
 
 #clock {
-  color: @grey0;
+  color: @grey2;
 }
 
 #custom-notification {
-  color: @grey0;
+  color: @grey2;
   /*margin: 0 12px 0 12px;*/
 }
 
 #pulseaudio {
-  color: @grey0;
+  color: @grey2;
 }
 
 #network {
-  color: @grey0;
+  color: @grey2;
   margin: 0 12px 0 12px;
 }
 
@@ -121,6 +121,6 @@ tooltip label {
 }
 
 #cpu {
-  color: @grey0;
+  color: @grey2;
 }
 
