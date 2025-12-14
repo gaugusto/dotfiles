@@ -34,7 +34,7 @@ tooltip label {
   padding: 5px 3px;
   margin: 0 0 0 12px;
   border-radius: 18px;
-  border: 2px solid @bg3;
+  border: 2px solid @bg2;
   color: @fg0;
 }
 
@@ -83,7 +83,7 @@ tooltip label {
   padding: 0 15px 0 15px;
   margin: 0 0 0 12px;
   border-radius: 45px;
-  border: 2px solid @bg3;
+  border: 2px solid @bg2;
 }
 
 #clock {
