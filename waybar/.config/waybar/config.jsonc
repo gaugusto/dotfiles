@@ -13,8 +13,8 @@
     "tray",
     "power-profiles-daemon",
     "cpu",
-    "network",
     "battery",
+    "network"
   ],
   "clock": {
     "interval": 60,
