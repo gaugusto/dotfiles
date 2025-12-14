@@ -19,7 +19,7 @@
   "clock": {
     "interval": 60,
     "tooltip": true,
-    "format": "{:%H:%M - %d-%m-%Y}",
+    "format": " {:%H:%M -  %d-%m-%Y}",
     "tooltip-format": "<tt>{calendar}</tt>"
   },
   "hyprland/workspaces": {
@@ -42,7 +42,7 @@
     "spacing": 10
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
@@ -69,11 +69,11 @@
     /*"interface": "wlp0s20f3",*/
     "format": "{ifname}",
     "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr} 󰈀",
+    "format-ethernet": "󰈀 {ifname}",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰈀",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-ethernet": "{ipaddr} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click": "~/.config/waybar/scripts/nm-dmenu.sh"
@@ -127,7 +127,7 @@
   },
   "cpu": {
     "interval": 10,
-	  "format": "{usage}% ",
+	  "format": " {usage}%",
 	  "max-length": 10
   }
 }

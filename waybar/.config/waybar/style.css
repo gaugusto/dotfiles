@@ -19,7 +19,7 @@ window#waybar {
 
 tooltip {
   background: @bg0;
-  border: 2px solid @bg3;
+  border: 1px solid @bg3;
   border-radius: 12px;
 }
 
@@ -34,12 +34,12 @@ tooltip label {
   padding: 5px 3px;
   margin: 0 0 0 12px;
   border-radius: 18px;
-  border: 1px solid @grey2;
-  color: @grey2;
+  border: 2px solid @bg3;
+  color: @fg0;
 }
 
 #workspaces button {
-  background-color: @bg1;
+  background-color: @bg4;
   padding: 0px 6px;
   margin: 0px 3px;
   border-radius: 45px;
@@ -48,7 +48,7 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background-color: @grey0;
+  background-color: @blue;
   color: @bg0;
   min-width: 45px;
   transition: all 0.3s ease-in-out;
@@ -56,16 +56,16 @@ tooltip label {
 }
 
 #workspaces button:hover {
-  background-color: @grey0;
-  color: @bg0;
+  background-color: @bg4;
+  color: @fg0;
   border-radius: 16px;
   min-width: 45px;
   background-size: 400% 400%;
 }
 
 #workspaces button.urgent {
-  background-color: @grey0;
-  color: @bg0;
+  background-color: @bg4;
+  color: @fg0;
   border-radius: 45px;
   min-width: 45px;
   background-size: 400% 400%;
@@ -83,24 +83,24 @@ tooltip label {
   padding: 0 15px 0 15px;
   margin: 0 0 0 12px;
   border-radius: 45px;
-  border: 1px solid @grey2;
+  border: 2px solid @bg3;
 }
 
 #clock {
-  color: @grey2;
+  color: @yellow;
 }
 
 #custom-notification {
-  color: @grey2;
+  color: @aqua;
   /*margin: 0 12px 0 12px;*/
 }
 
 #pulseaudio {
-  color: @grey2;
+  color: @green;
 }
 
 #network {
-  color: @grey2;
+  color: @yellow;
   margin: 0 12px 0 12px;
 }
 
@@ -121,6 +121,6 @@ tooltip label {
 }
 
 #cpu {
-  color: @grey2;
+  color: @purple;
 }
 
