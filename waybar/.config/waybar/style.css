@@ -124,6 +124,10 @@ tooltip label {
   color: @f0;
 }
 
+#battery:hover {
+  color: @aqua;
+}
+
 #power-profiles-daemon.performance {
   color: @red;
 }
