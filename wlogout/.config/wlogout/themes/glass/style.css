@@ -1,0 +1,102 @@
+/*
+          _                         _
+__      _| | ___   __ _  ___  _   _| |_
+\ \ /\ / / |/ _ \ / _` |/ _ \| | | | __|
+ \ V  V /| | (_) | (_| | (_) | |_| | |_
+  \_/\_/ |_|\___/ \__, |\___/ \__,_|\__|
+                  |___/
+
+by Stephan Raabe (2023)
+-----------------------------------------------------
+*/
+
+/* -----------------------------------------------------
+ * Import Pywal colors
+ * ----------------------------------------------------- */
+@import '../../../waybar/one-dark.css';
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+	background-image: none;
+	transition: 20ms;
+	box-shadow: none;
+}
+
+window {
+	/*background: url('../../../backgrounds/od_neon.png');*/
+	background-color: transparent;
+  background-size: cover;
+	font-size: 16pt;
+}
+
+button {
+	color: @fg0;
+	
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20%;
+	background-color: alpha(@bg2, 0.8);
+	
+  border-radius: 80px; /* Increased border radius jfor a more rounded look */
+	border: 3px solid @fg0;
+
+  transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  animation: gradient_f 20s ease-in infinite;
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:focus,
+button:active,
+button:hover {
+	background-color: alpha(@bg0, 0.9);
+  color: @fg0;
+  border: 3px solid @purple;
+
+  font-weight: bold;
+}
+
+/*
+-----------------------------------------------------
+Buttons
+-----------------------------------------------------
+*/
+
+#lock,
+#logout,
+#suspend,
+#hibernate,
+#shutdown,
+#reboot {
+  margin: 10px;
+  border-radius: 20px
+}
+
+#lock {
+	background-image: image(url("../../icons/lock.png"));
+}
+
+#logout {
+	background-image: image(url("../../icons/logout.png"));
+}
+
+#suspend {
+	background-image: image(url("../../icons/suspend.png"));
+}
+
+#hibernate {
+	background-image: image(url("../../icons/hibernate.png"));
+}
+
+#shutdown {
+	background-image: image(url("../../icons/shutdown.png"));
+}
+
+#reboot {
+	background-image: image(url("../../icons/reboot.png"));
+}
+

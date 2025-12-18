@@ -30,11 +30,11 @@ tooltip label {
 }
 
 #workspaces {
-  background-color: @bg0;
+  background-color: alpha(@bg0, 0.8);
   padding: 5px 3px;
   margin: 0 0 0 12px;
   border-radius: 18px;
-  border: 2px solid @bg2;
+  border: 1px solid @grey2;
   color: @fg0;
 }
 
@@ -79,11 +79,11 @@ tooltip label {
 #custom-notification,
 #power-profiles-daemon,
 #cpu {
-  background-color: @bg0;
+  background-color: alpha(@bg0, 0.8);
   padding: 0 15px 0 15px;
   margin: 0 0 0 12px;
   border-radius: 45px;
-  border: 2px solid @bg2;
+  border: 1px solid @grey2;
 }
 
 #clock {

@@ -2,17 +2,18 @@
 
 window {
   background-color: @bg0;
+  border: 2px solid @bg2;
 }
 
 /* Outer bar container, takes all the window width/height */
 #outer-box {
-  background-color: @bg0;
-	margin: 0px;
+  background: alpha(@bg0, 0.85);
+	margin: 10px;
 }
 
 /* Inner bar container, surrounds buttons */
 #inner-box {
-	background-color: @bg0;
+	background-color: @bg1;
 	border-radius: 10px;
 	border-style: none;
 	border-width: 1px;
