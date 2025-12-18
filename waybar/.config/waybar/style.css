@@ -121,7 +121,7 @@ tooltip label {
 }
 
 #battery {
-  color: @f0;
+  color: @fg0;
 }
 
 #battery:hover {
