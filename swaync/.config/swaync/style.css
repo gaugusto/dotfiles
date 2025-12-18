@@ -30,6 +30,7 @@
 .notification-group {
   border-radius: var(--border-radius);
   padding: 8px;
+  background-color: @bg1;
 }
 
 .widget.widget-mpris {
