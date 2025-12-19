@@ -28,7 +28,7 @@ by Stephan Raabe (2023)
 
 window {
 	/*background: url('../../../backgrounds/od_neon.png');*/
-	background-color: transparent;
+	background-color: alpha(@bg1, 0.6);
   background-size: cover;
 	font-size: 16pt;
 }
