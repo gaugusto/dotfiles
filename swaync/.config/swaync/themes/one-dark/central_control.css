@@ -74,7 +74,7 @@
   background: transparent;
   border-radius: 6px;
   color: @text;
-  margin: 0px;
+  margin: 2px;
   padding: 4px;
 }
 
@@ -218,7 +218,7 @@ progressbar {
 
   /* Music player */
 .widget-mpris {
-    background: @background-alt;
+    background: transparent;
     border-radius: 16px;
     color: @text;
     margin:  20px 6px;
@@ -226,14 +226,14 @@ progressbar {
 
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
 .widget-mpris-player {
-    background-color: @background-sec;
-    border-radius: 22px;
+    background-color: @background-alt;
+    border-radius: 20px;
     padding: 6px 14px;
     margin: 6px;
 }
 
 .widget-mpris > box > button {
-  color: @text;
+  color: @yellow;
   border-radius: 20px;
 }
  
@@ -261,7 +261,7 @@ progressbar {
 
 /* Volume */
 .widget-volume {
-  background: @background-sec;
+  background: @background-alt;
   color: @background;
   padding: 4px;
   margin: 6px;

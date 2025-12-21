@@ -1,19 +1,7 @@
-/*
-          _                         _
-__      _| | ___   __ _  ___  _   _| |_
-\ \ /\ / / |/ _ \ / _` |/ _ \| | | | __|
- \ V  V /| | (_) | (_| | (_) | |_| | |_
-  \_/\_/ |_|\___/ \__, |\___/ \__,_|\__|
-                  |___/
-
-by Stephan Raabe (2023)
------------------------------------------------------
-*/
-
 /* -----------------------------------------------------
- * Import Pywal colors
+ * Import one-dark colors
  * ----------------------------------------------------- */
-@import '../../../waybar/one-dark.css';
+@import '../../../color-themes/one-dark/style.css';
 
 /* -----------------------------------------------------
  * General
@@ -51,11 +39,18 @@ button {
 }
 
 button:focus,
-button:active,
-button:hover {
+button:active {
 	background-color: alpha(@bg0, 0.9);
   color: @fg0;
   border: 3px solid @purple;
+
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: alpha(@bg0, 0.9);
+  color: @fg0;
+  border: 3px solid @fg0;
 
   font-weight: bold;
 }

@@ -1,4 +1,4 @@
-@import "one-dark.css";
+@import "../color-themes/one-dark/style.css";
 
 * {
   font-family: "JetBrainsMono Nerd Font Propo";
