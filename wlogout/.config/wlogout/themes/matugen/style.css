@@ -1,0 +1,88 @@
+/* -----------------------------------------------------
+ * Import one-dark colors
+ * ----------------------------------------------------- */
+@import '../../../matugen/output/wlogout_colors.css';
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+	background-image: none;
+	transition: 20ms;
+	box-shadow: none;
+}
+
+window {
+	background-color: alpha(@background, 0.6);
+  background-size: cover;
+	font-size: 16pt;
+}
+
+button {
+	color: @fg0;
+	
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20%;
+	background-color: alpha(@surface, 0.5);
+	
+  border-radius: 80px; /* Increased border radius jfor a more rounded look */
+	border: 3px solid @on_surface;
+
+  transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  animation: gradient_f 20s ease-in infinite;
+  
+  box-shadow: 0 4px 8px 0 @shadow, 0 6px 20px 0 @shadow);
+}
+
+button:focus,
+button:active,
+button:hover {
+	background-color: alpha(@inverse_on_surface, 0.9);
+  color: @on_surface;
+  border: 3px solid @surface_tint;
+  font-weight: bold;
+}
+
+/*
+-----------------------------------------------------
+Buttons
+-----------------------------------------------------
+*/
+
+#lock,
+#logout,
+#suspend,
+#hibernate,
+#shutdown,
+#reboot {
+  margin: 10px;
+  border-radius: 20px
+}
+
+#lock {
+	background-image: image(url("../../icons/lock.png"));
+}
+
+#logout {
+	background-image: image(url("../../icons/logout.png"));
+}
+
+#suspend {
+	background-image: image(url("../../icons/suspend.png"));
+}
+
+#hibernate {
+	background-image: image(url("../../icons/hibernate.png"));
+}
+
+#shutdown {
+	background-image: image(url("../../icons/shutdown.png"));
+}
+
+#reboot {
+	background-image: image(url("../../icons/reboot.png"));
+}
+

@@ -1,0 +1,152 @@
+@import "../color-themes/style.css";
+
+/* @import "../matugen/output/waybar_colors.css"; */
+
+* {
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
+
+  border: none;
+  border-radius: 0px;
+
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: transparent;
+
+}
+
+tooltip {
+  background: @bg0;
+  border: 1px solid @bg3;
+  border-radius: 15px;
+}
+
+tooltip label {
+  color: @grey2;
+  padding: 6px;
+  font-size: 13px;
+}
+
+#workspaces {
+  background-color: alpha(@bg0, 0.8);
+  padding: 5px 3px;
+  margin: 0 5px;
+  border-radius: 15px;
+  border: none;
+  color: @fg0;
+}
+
+#workspaces button {
+  background-color: alpha(@bg4, 0.8);
+  padding: 0px 6px;
+  margin: 0px 5px;
+  border-radius: 45px;
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  background-color: alpha(@blue, 0.8);
+  color: @bg0;
+  min-width: 45px;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+}
+
+#workspaces button:hover {
+  background-color: alpha(@bg4, 0.8);
+  color: @fg0;
+  border-radius: 15px;
+  min-width: 45px;
+  background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+  background-color: alpha(@bg4, 0.8);
+  color: @fg0;
+  border-radius: 45px;
+  min-width: 45px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
+}
+
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-notification,
+#power-profiles-daemon,
+#cpu {
+  background-color: alpha(@bg0, 0.8);
+  padding: 0 15px 0 15px;
+  margin: 0 5px;
+  border-radius: 15px;
+  border: none;
+}
+
+#clock {
+  color: @fg0;
+  margin-left: 10px;
+}
+
+#clock:hover {
+  color: @yellow;
+}
+
+#custom-notification {
+  color: @fg0;
+}
+
+#custom-notification:hover {
+  color: @red;
+}
+
+#pulseaudio {
+  color: @fg0;
+}
+
+#pulseaudio:hover {
+  color: @green;
+}
+
+#network {
+  color: @fg0;
+  margin-right: 10px;
+}
+
+#network:hover {
+  color: @blue;
+}
+
+#battery {
+  color: @fg0;
+}
+
+#battery:hover {
+  color: @aqua;
+}
+
+#power-profiles-daemon.performance {
+  color: @red;
+}
+
+#power-profiles-daemon.balanced {
+  color: @blue;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @green;
+}
+
+#cpu {
+  color: @fg0;
+}
+
+#cpu:hover {
+  color: @purple;
+}
+
