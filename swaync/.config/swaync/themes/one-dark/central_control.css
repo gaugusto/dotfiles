@@ -1,9 +1,9 @@
-@define-color text            @fg0;
-@define-color background      @bg0;
-@define-color background-alt  alpha(@bg4, .8);
-@define-color selected        @blue;
-@define-color hover           alpha(@selected, .8);
-@define-color urgent          @red;
+@define-color text            @on_surface;
+@define-color background      @surface;
+@define-color background-alt  alpha(@secondary_container, .9);
+@define-color selected        @primary;
+@define-color hover           alpha(@primary, .8);
+@define-color urgent          @error;
 
 * {
   color:            @text;
@@ -25,7 +25,7 @@
 .control-center {
   background: alpha(@background, .85);
   border-radius: 24px;
-  border: 3px solid alpha(@purple, 0.8);
+  border: 3px solid alpha(@selected, 0.8);
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
   margin: 18px;
   padding: 12px;
@@ -233,7 +233,7 @@ progressbar {
 }
 
 .widget-mpris > box > button {
-  color: @yellow;
+  color: @primary;
   border-radius: 20px;
 }
  

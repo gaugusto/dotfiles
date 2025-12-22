@@ -1,9 +1,9 @@
-@define-color text            @fg0;
-@define-color background      @bg0;
-@define-color background-alt  @bg2;
-@define-color selected        @blue;
-@define-color hover           @bg3;
-@define-color urgent          @red;
+@define-color text            @on_surface;
+@define-color background      @surface;
+@define-color background-alt  @surface_dim;
+@define-color selected        @primary;
+@define-color hover           @surface_variant;
+@define-color urgent          @error;
 
 * {
 
@@ -31,7 +31,7 @@
 .floating-notifications.background .notification-row .notification-background {
   background: alpha(@background, .8);
   box-shadow: 0 0 8px 0 rgba(0,0,0,.6);
-  border: 3px solid alpha(@purple, 0.8);
+  border: 3px solid alpha(@primary, 0.8);
   border-radius: 24px;
   margin: 16px;
   padding: 0;
