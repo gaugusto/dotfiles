@@ -11,6 +11,7 @@ post_hook = 'hyprctl reload'
 [templates.waybar]
 input_path = './templates/colors.conf'
 output_path = '~/.config/matugen/output/waybar_colors.css'
+post_hook = 'pkill -SIGUSR2 waybar & pkill -SIGUSR2 swaync'
 
 [templates.kitty]
 input_path = './templates/kitty-colors.conf'

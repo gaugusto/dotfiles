@@ -3,7 +3,7 @@
 dir="$HOME/.config/rofi/launchers/type-1"
 theme='style-6'
 
-WALL_DIR="$HOME/.config/backgrounds"
+WALL_DIR="$HOME/Imagens/Wallpaper-Bank/wallpapers"
 
 CWD="$(pwd)"
 

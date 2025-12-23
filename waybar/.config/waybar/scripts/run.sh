@@ -3,5 +3,9 @@
 killall -9 waybar
 killall -9 swaync
 
-waybar & -disown
-swaync & -disown
+sleep 1
+
+waybar &
+-disown
+swaync &
+-disown
