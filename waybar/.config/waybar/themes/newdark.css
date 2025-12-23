@@ -89,6 +89,18 @@ tooltip label {
     background-color: alpha(#26A65B, 0.5);
 }
 
+#power-profiles-daemon.performance {
+  color: #e08c75;
+}
+
+#power-profiles-daemon.balanced {
+  color: #61afef;
+}
+
+#power-profiles-daemon.power-saver {
+  color: #26A65B;
+}
+
 @keyframes blink {
     to {
         background-color: @on_primary;
