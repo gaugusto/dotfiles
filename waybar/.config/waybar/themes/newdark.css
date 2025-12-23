@@ -42,7 +42,7 @@ tooltip label {
 
 #workspaces button.active, 
 #workspaces button.urgent {
-  background-color: alpha(@primary, 0.2);
+  background-color: alpha(@primary, 0.3);
   border-radius: 10px;
 }
 
@@ -59,7 +59,7 @@ tooltip label {
 #custom-notification,
 #power-profiles-daemon,
 #cpu {
-  background: alpha(@primary, 0.2);
+  background: alpha(@primary, 0.3);
   padding: 2px 10px;
   margin: 2px 5px;
   border-radius: 10px;
