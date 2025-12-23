@@ -27,7 +27,6 @@ tooltip label {
 #workspaces {
   margin: 2px 5px;
   padding: 2px 10px;
-  /*background: alpha(@primary, 0.2);*/
   background: transparent;
   border: none;
   border-radius: 10px;
@@ -59,7 +58,7 @@ tooltip label {
 #custom-notification,
 #power-profiles-daemon,
 #cpu {
-  background: alpha(@primary, 0.3);
+  background: alpha(@primary, 0.2);
   padding: 2px 10px;
   margin: 2px 5px;
   border-radius: 10px;
