@@ -3,7 +3,8 @@
   "margin-top": 10,
   "modules-left": [
     "clock",
-    "pulseaudio"
+    "pulseaudio",
+    "custom/weather"
   ],
   "modules-center": [
     "hyprland/workspaces",
@@ -129,6 +130,13 @@
     "interval": 10,
 	  "format": " {usage}%",
 	  "max-length": 10
+  },
+  "custom/weather": {
+    "exec": "${HOME}/.local/bin/get_weather.sh Sao_Paulo+Brazil",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 10800 
   }
 }
 
