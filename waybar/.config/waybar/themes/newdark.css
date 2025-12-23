@@ -10,30 +10,48 @@
 }
 
 window#waybar {
-    background: transparent;
-    color: @on_primary;
+  background: transparent;
+  color: @inverse_surface;
 }
 
 tooltip {
-  background: @primary;
-  color: @on_primary;
-  border: 1px solid @outline;
+  border: 2px solid @outline;
+  border-radius: 10px;
 }
 
 tooltip label {
-  color: @on_primary;
+  color: @on_surface;
   font-weight: normal;
+  border-radius: 10px;
+}
+#workspaces {
+  margin: 2px 5px;
+  padding: 2px 10px;
+  /*background: alpha(@primary, 0.2);*/
+  background: transparent;
+  border: none;
+  border-radius: 10px;
 }
 
 #workspaces button {
-    color: @on_primary;
+  color: @inverse_surface;
+  margin: 0 5px;
+  padding: 0px 30px;
+  border-radius: 10px;
 }
 
-#workspaces button.focused {
-  color: @scrim;
+#workspaces button.active, 
+#workspaces button.urgent {
+  background-color: alpha(@primary, 0.2);
+  border-radius: 10px;
 }
 
-#workspaces,
+#workspaces button:hover {
+  color: @on_primary;
+  border: none;
+  background: alpha(@inverse_surface, 0.8);
+}
+
 #battery,
 #pulseaudio,
 #network,
@@ -41,27 +59,46 @@ tooltip label {
 #custom-notification,
 #power-profiles-daemon,
 #cpu {
-  background: alpha(@primary, 0.5);
-  padding: 2px 8px;
-  margin: 3px 5px;
+  background: alpha(@primary, 0.2);
+  padding: 2px 10px;
+  margin: 2px 5px;
   border-radius: 10px;
 }
 
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#clock:hover,
+#custom-notification:hover,
+#power-profiles-daemon:hover,
+#cpu:hover {
+  background: alpha(@inverse_surface, 0.8);
+  color: @on_primary;
+}
+
+#clock {
+  margin-left: 10px;
+}
+
+#custom-notification {
+  margin-right: 10px;
+}
+
 #battery.charging {
-    color: white;
-    background-color: #26A65B;
+    color: @inverse_surface;
+    background-color: alpha(#26A65B, 0.5);
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
+        background-color: @on_primary;
         color: black;
     }
 }
 
 #battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
+    background: alpha(#f53c3c, 0.5);
+    color: @on_primary;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);

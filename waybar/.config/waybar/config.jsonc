@@ -2,19 +2,19 @@
   "position": "top",
   "margin-top": 10,
   "modules-left": [
-    "clock"
+    "clock",
+    "pulseaudio"
   ],
   "modules-center": [
-    "pulseaudio",
     "hyprland/workspaces",
-    "custom/notification"
   ],
   "modules-right": [
     "tray",
     "power-profiles-daemon",
     "cpu",
     "battery",
-    "network"
+    "network",
+    "custom/notification"
   ],
   "clock": {
     "interval": 60,
@@ -23,7 +23,7 @@
     "tooltip-format": "<tt>{calendar}</tt>"
   },
   "hyprland/workspaces": {
-    "format": "{name} {icon}",
+    "format": "{icon} {name}",
     "format-icons": {
       "1": "",
       "2": "",
@@ -68,7 +68,7 @@
   "network": {
     /*"interface": "wlp0s20f3",*/
     "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": " {essid}",
     "format-ethernet": "󰈀 {ifname}",
     "format-disconnected": "󰈂", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰈀",
@@ -84,7 +84,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
+    "format": "{icon} {capacity}%",
     "format-icons": [
       "",
       "",
