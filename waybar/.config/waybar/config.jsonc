@@ -76,7 +76,7 @@
     "tooltip-format-ethernet": "{ipaddr} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "~/.config/waybar/scripts/nm-dmenu.sh"
+    "on-click": "~/.local/bin/nm-dmenu.sh"
   },
   "battery": {
     "interval": 60,
