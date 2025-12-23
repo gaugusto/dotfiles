@@ -1,0 +1,71 @@
+@import "../matugen/output/waybar_colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Propo", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @on_primary;
+}
+
+tooltip {
+  background: @primary;
+  color: @on_primary;
+  border: 1px solid @outline;
+}
+
+tooltip label {
+  color: @on_primary;
+  font-weight: normal;
+}
+
+#workspaces button {
+    color: @on_primary;
+}
+
+#workspaces button.focused {
+  color: @scrim;
+}
+
+#workspaces,
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-notification,
+#power-profiles-daemon,
+#cpu {
+  background: alpha(@primary, 0.5);
+  padding: 2px 8px;
+  margin: 3px 5px;
+  border-radius: 10px;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+

@@ -1,0 +1,150 @@
+@import "../matugen/output/waybar_colors.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
+
+  border: none;
+  border-radius: 0px;
+
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: transparent;
+
+}
+
+tooltip {
+  background: @surface;
+  border: 2px solid @outline;
+  border-radius: 15px;
+}
+
+tooltip label {
+  color: @on_surface;
+  padding: 6px;
+  font-size: 13px;
+}
+
+#workspaces {
+  background-color: alpha(@surface, 0.8);
+  padding: 5px 3px;
+  margin: 0 5px;
+  border-radius: 15px;
+  border: none;
+  color: @on_surface;
+}
+
+#workspaces button {
+  background-color: alpha(@inverse_on_surface, 0.8);
+  padding: 0px 6px;
+  margin: 0px 5px;
+  border-radius: 45px;
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  background-color: alpha(@primary, 0.8);
+  color: @on_primary;
+  min-width: 45px;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+}
+
+#workspaces button:hover {
+  background-color: alpha(@secondary_container, 0.8);
+  color: @on_surface;
+  border-radius: 15px;
+  min-width: 45px;
+  background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+  background-color: alpha(@surface, 0.8);
+  color: @on_surface;
+  border-radius: 45px;
+  min-width: 45px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
+}
+
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-notification,
+#power-profiles-daemon,
+#cpu {
+  background-color: alpha(@surface, 0.8);
+  padding: 0 15px 0 15px;
+  margin: 0 5px;
+  border-radius: 15px;
+  border: none;
+}
+
+#clock {
+  color: @on_surface;
+  margin-left: 10px;
+}
+
+#clock:hover {
+  color: @surface_tint;
+}
+
+#custom-notification {
+  color: @on_surface;
+}
+
+#custom-notification:hover {
+  color: @surface_tint;
+}
+
+#pulseaudio {
+  color: @on_surface;
+}
+
+#pulseaudio:hover {
+  color: @surface_tint;
+}
+
+#network {
+  color: @on_surface;
+  margin-right: 10px;
+}
+
+#network:hover {
+  color: @surface_tint;
+}
+
+#battery {
+  color: @on_surface;
+}
+
+#battery:hover {
+  color: @surface_tint;
+}
+
+#power-profiles-daemon.performance {
+  color: #e08c75;
+}
+
+#power-profiles-daemon.balanced {
+  color: #61afef;
+}
+
+#power-profiles-daemon.power-saver {
+  color: #98c379;
+}
+
+#cpu {
+  color: @on_surface;
+}
+
+#cpu:hover {
+  color: @surface_tint;
+}
+
