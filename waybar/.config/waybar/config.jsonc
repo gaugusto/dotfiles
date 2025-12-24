@@ -2,19 +2,18 @@
   "position": "top",
   "margin-top": 10,
   "modules-left": [
-    "clock",
-    "pulseaudio",
-    "custom/weather"
+    "hyprland/workspaces",
   ],
   "modules-center": [
-    "hyprland/workspaces",
+    "clock"
   ],
   "modules-right": [
     "tray",
+    "custom/weather",
     "power-profiles-daemon",
-    "custom/nvidia",
     "cpu",
     "battery",
+    "pulseaudio",
     "network",
     "custom/notification"
   ],
