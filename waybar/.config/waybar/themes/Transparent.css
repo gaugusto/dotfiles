@@ -83,8 +83,8 @@ tooltip label {
 #cpu:hover,
 #custom-weather:hover,
 #custom-nvidia:hover {
-  background: alpha(@inverse_surface, 0.8);
-  color: @on_primary;
+  color: @inverse_surface;
+  background: alpha(@on_primary, 0.8);
   text-shadow: none;
 }
 
