@@ -26,6 +26,10 @@ output_path = '~/.config/matugen/output/wlogout_colors.css'
 input_path = './templates/rofi.rasi'
 output_path = '~/.config/matugen/output/rofi_colors.rasi'
 
+[templates.btop]
+input_path = './templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
 ###############################################################
 
 [templates.gtk3]

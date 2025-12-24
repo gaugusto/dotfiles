@@ -36,7 +36,8 @@
       "default": ""
     },
     "persistent-workspaces": {
-      "*": 5 // 5 workspaces by default on every monitor
+      "*": 5, // 5 workspaces by default on every monitor
+      "DP-2": 3 // but only three on DP-2
     }
   },
   "tray": {
