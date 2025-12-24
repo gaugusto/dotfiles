@@ -7,6 +7,7 @@
     font-weight: bold;
     font-size: 1rem;
     min-height: 0;
+    text-shadow: 0 0 3px @shadow, 0 0 1px @shadow;
 }
 
 window#waybar {
@@ -24,6 +25,7 @@ tooltip label {
   font-weight: normal;
   border-radius: 10px;
 }
+
 #workspaces {
   margin: 2px 5px;
   padding: 2px 10px;
@@ -39,16 +41,21 @@ tooltip label {
   color: @inverse_surface;
 }
 
-#workspaces button.active, 
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: alpha(@on_primary, 0.8);
+  border-radius: 10px;
+  text-shadow: none;
+}
+
 #workspaces button.urgent {
-  background-color: alpha(@primary, 0.3);
+  background-color: alpha(@primary, 0.5);
   border-radius: 10px;
 }
 
 #workspaces button:hover {
-  color: @on_primary;
-  border: none;
-  background: alpha(@inverse_surface, 0.8);
+  color: @inverse_surface;
+  background: alpha(@on_primary, 0.5);
 }
 
 #battery,
@@ -60,7 +67,8 @@ tooltip label {
 #cpu,
 #custom-weather,
 #custom-nvidia {
-  background: alpha(@primary, 0.1);
+  /*background: alpha(@primary, 0.1);*/
+  background: transparent;
   padding: 2px 10px;
   margin: 2px 5px;
   border-radius: 10px;
@@ -77,6 +85,7 @@ tooltip label {
 #custom-nvidia:hover {
   background: alpha(@inverse_surface, 0.8);
   color: @on_primary;
+  text-shadow: none;
 }
 
 #clock {
