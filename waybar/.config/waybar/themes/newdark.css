@@ -36,6 +36,7 @@ tooltip label {
   margin: 0 5px;
   padding: 0px 15px;
   border-radius: 10px;
+  color: @inverse_surface;
 }
 
 #workspaces button.active, 

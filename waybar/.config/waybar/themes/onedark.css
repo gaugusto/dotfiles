@@ -49,7 +49,8 @@ tooltip label {
   transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.active {
+#workspaces button.active,
+#workspaces button.urgent {
   background-color: alpha(@blue, 0.8);
   color: @bg0;
   min-width: 45px;
@@ -65,14 +66,14 @@ tooltip label {
   background-size: 400% 400%;
 }
 
-#workspaces button.urgent {
+/*#workspaces button.urgent {
   background-color: alpha(@bg4, 0.8);
   color: @fg0;
   border-radius: 45px;
   min-width: 45px;
   background-size: 400% 400%;
   transition: all 0.3s ease-in-out;
-}
+}*/
 
 #battery,
 #pulseaudio,
@@ -80,7 +81,9 @@ tooltip label {
 #clock,
 #custom-notification,
 #power-profiles-daemon,
-#cpu {
+#cpu,
+#custom-weather,
+#custom-nvidia {
   background-color: alpha(@bg0, 0.8);
   padding: 0 15px 0 15px;
   margin: 0 5px;
