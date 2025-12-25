@@ -54,6 +54,8 @@ tooltip label {
 }
 
 #workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
   color: @inverse_surface;
   background: alpha(@on_primary, 0.5);
 }
