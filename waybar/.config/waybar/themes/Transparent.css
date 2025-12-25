@@ -1,12 +1,17 @@
 @import "../matugen/output/waybar_colors.css";
 
 * {
-    border: none;
-    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font Propo", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1rem;
+
+    border: none;
+    border-radius: 0;
+ 
     min-height: 0;
+    padding: 0;
+    margin: 0;
+
     text-shadow: 0 0 3px @shadow, 0 0 1px @shadow;
 }
 
@@ -22,14 +27,13 @@ tooltip {
 
 tooltip label {
   color: @on_surface;
-  font-weight: normal;
-  border-radius: 10px;
+  padding: 15px;
 }
 
 #workspaces {
+  background: transparent;
   margin: 2px 5px;
   padding: 2px 10px;
-  background: transparent;
   border: none;
   border-radius: 10px;
 }
@@ -56,8 +60,8 @@ tooltip label {
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  color: @inverse_surface;
   background: alpha(@on_primary, 0.5);
+  color: @inverse_surface;
 }
 
 #battery,
@@ -90,8 +94,8 @@ tooltip label {
   text-shadow: none;
 }
 
-#clock {
-  margin-left: 10px;
+#workspaces {
+  margin-left: 0px;
 }
 
 #custom-notification {

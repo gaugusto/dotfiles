@@ -3,6 +3,7 @@
 * {
   font-family: "JetBrainsMono Nerd Font Propo";
   font-weight: bold;
+  font-size: 1rem;
 
   border: none;
   border-radius: 0px;
@@ -14,7 +15,7 @@
 
 window#waybar {
   background: transparent;
-
+  color: @inverse_surface;
 }
 
 tooltip {
@@ -25,39 +26,43 @@ tooltip {
 
 tooltip label {
   color: @on_surface;
-  padding: 6px;
-  font-size: 13px;
+  padding: 15px;
 }
 
 #workspaces {
   background-color: alpha(@surface, 0.8);
-  padding: 5px 3px;
   margin: 0 5px;
-  border-radius: 15px;
+  padding: 5px 3px;
   border: none;
-  color: @on_surface;
+  border-radius: 15px;
 }
 
 #workspaces button {
   background-color: alpha(@inverse_on_surface, 0.8);
-  padding: 0px 6px;
   margin: 0px 5px;
-  border-radius: 45px;
-  color: transparent;
+  padding: 0px 6px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  color: alpha(@on_surface, 0.2);
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: alpha(@on_primary, 0.8);
+  min-width: 45px;
+  color: @on_surface;
   transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.active,
 #workspaces button.urgent {
-  background-color: alpha(@primary, 0.8);
-  color: @on_primary;
-  min-width: 45px;
-  transition: all 0.3s ease-in-out;
-  font-size: 13px;
+  background-color: alpha(@on_error, 0.5);
+  border-radius: 15px;
 }
 
 #workspaces button:hover {
-  background-color: alpha(@secondary_container, 0.8);
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background-color: alpha(@on_primary, 0.5);
   color: @on_surface;
   border-radius: 15px;
   min-width: 45px;
@@ -77,49 +82,32 @@ tooltip label {
   padding: 0 15px 0 15px;
   margin: 0 5px;
   border-radius: 15px;
-  border: none;
 }
 
-#clock {
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#clock:hover,
+#custom-notification:hover,
+#power-profiles-daemon:hover,
+#cpu:hover,
+#custom-weather:hover,
+#custom-nvidia:hover {
+  background-color: alpha(@on_primary, 0.8);
   color: @on_surface;
+}
+
+#workspaces {
   margin-left: 10px;
 }
 
-#clock:hover {
-  color: @surface_tint;
-}
-
 #custom-notification {
-  color: @on_surface;
-}
-
-#custom-notification:hover {
-  color: @surface_tint;
-}
-
-#pulseaudio {
-  color: @on_surface;
-}
-
-#pulseaudio:hover {
-  color: @surface_tint;
-}
-
-#network {
-  color: @on_surface;
   margin-right: 10px;
 }
 
-#network:hover {
-  color: @surface_tint;
-}
-
-#battery {
-  color: @on_surface;
-}
-
-#battery:hover {
-  color: @surface_tint;
+#battery.charging {
+    color: @inverse_surface;
+    background-color: alpha(#26A65B, 0.5);
 }
 
 #power-profiles-daemon.performance {
@@ -134,11 +122,19 @@ tooltip label {
   color: #98c379;
 }
 
-#cpu {
-  color: @on_surface;
+@keyframes blink {
+    to {
+        background-color: @on_primary;
+        color: black;
+    }
 }
 
-#cpu:hover {
-  color: @surface_tint;
+#battery.warning:not(.charging) {
+    background: alpha(#f53c3c, 0.5);
+    color: @on_primary;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
-
