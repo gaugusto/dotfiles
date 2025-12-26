@@ -38,17 +38,18 @@ tooltip label {
 }
 
 #workspaces button {
-  background: alpha(@inverse_on_surface, 0.4);
+  /*background: alpha(@inverse_on_surface, 0.4);*/
+  background: alpha(@surface, 0.8);
   margin: 0px 5px;
   padding: 0px 6px;
   border-radius: 15px;
   transition: all 0.3s ease-in-out;
-  color: transparent;
+  color: alpha(@on_surface, 0.1);
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: alpha(@on_primary, 0.9);
+  background-color: alpha(@on_primary, 0.8);
   min-width: 45px;
   color: @on_surface;
   transition: all 0.3s ease-in-out;
