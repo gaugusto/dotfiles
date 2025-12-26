@@ -38,7 +38,7 @@ tooltip label {
 }
 
 #workspaces button {
-  background-color: alpha(@inverse_on_surface, 0.8);
+  background-color: alpha(@inverse_on_surface, 0.4);
   margin: 0px 5px;
   padding: 0px 6px;
   border-radius: 15px;

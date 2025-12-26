@@ -1,12 +1,12 @@
 [config.wallpaper]
 set = true
 command = "swww"
-arguments = ["img", "--transition-type", "center"]
+arguments = ["img", "--transition-type", "fade"]
 
 [templates.hyprland]
 input_path = './templates/hyprland-colors.conf'
 output_path = '~/.config/matugen/output/hyprland_colors.conf'
-post_hook = 'hyprctl reload'
+post_hook = 'hyprctl reload config-only -q'
 
 [templates.waybar]
 input_path = './templates/colors.conf'

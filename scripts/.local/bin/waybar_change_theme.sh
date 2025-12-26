@@ -28,5 +28,7 @@ LINK_PATH="$TARGET_DIR/$LINK_NAME"
 # Cria ou substitui o link simbólico
 ln -sf "$CSS_PATH" "$LINK_PATH"
 
+sleep 1
+
 # Reinicia o waybar
 "$HOME/.local/bin/start_waybar.sh"
