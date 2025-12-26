@@ -15,7 +15,7 @@
 }
 
 window {
-	background-color: alpha(@background, 0.6);
+	background-color: alpha(@background, 0.9);
   background-size: cover;
 	font-size: 16pt;
 }
