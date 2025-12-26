@@ -79,7 +79,7 @@ tooltip label {
 #cpu,
 #custom-weather,
 #custom-nvidia {
-  background-color: alpha(@surface, 0.8);
+  background: alpha(@surface, 0.8);
   padding: 0 15px 0 15px;
   margin: 0 5px;
   border-radius: 15px;
