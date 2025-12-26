@@ -30,7 +30,7 @@ tooltip label {
 }
 
 #workspaces {
-  background-color: alpha(@surface, 0.8);
+  background: alpha(@surface, 0.8);
   margin: 0 5px;
   padding: 5px 3px;
   border: none;
@@ -38,17 +38,17 @@ tooltip label {
 }
 
 #workspaces button {
-  background-color: alpha(@inverse_on_surface, 0.4);
+  background: alpha(@inverse_on_surface, 0.4);
   margin: 0px 5px;
   padding: 0px 6px;
   border-radius: 15px;
   transition: all 0.3s ease-in-out;
-  color: alpha(@on_surface, 0.2);
+  color: transparent;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: alpha(@on_primary, 0.8);
+  background-color: alpha(@on_primary, 0.9);
   min-width: 45px;
   color: @on_surface;
   transition: all 0.3s ease-in-out;
@@ -62,7 +62,7 @@ tooltip label {
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  background-color: alpha(@on_primary, 0.5);
+  background: alpha(@on_primary, 0.5);
   color: @on_surface;
   border-radius: 15px;
   min-width: 45px;
