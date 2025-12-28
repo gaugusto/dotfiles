@@ -21,7 +21,7 @@ window#waybar {
 tooltip {
   background: @surface;
   border: 2px solid @outline;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 tooltip label {
@@ -34,7 +34,7 @@ tooltip label {
   margin: 0 5px;
   padding: 5px 3px;
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 #workspaces button {
@@ -42,7 +42,7 @@ tooltip label {
   background: transparent;
   margin: 0px 5px;
   padding: 0px 6px;
-  border-radius: 15px;
+  border-radius: 20px;
   transition: all 0.3s ease-in-out;
   color: alpha(@on_surface, 0.1);
 }
@@ -57,7 +57,7 @@ tooltip label {
 
 #workspaces button.urgent {
   background-color: alpha(@on_error, 0.5);
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 #workspaces button:hover {
@@ -65,7 +65,7 @@ tooltip label {
   text-shadow: inherit;
   background: alpha(@on_primary, 0.5);
   color: @on_surface;
-  border-radius: 15px;
+  /* border-radius: 20px; */
   min-width: 45px;
   background-size: 400% 400%;
 }
@@ -82,7 +82,7 @@ tooltip label {
   background: alpha(@surface, 0.8);
   padding: 0 15px 0 15px;
   margin: 0 5px;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 #battery:hover,
