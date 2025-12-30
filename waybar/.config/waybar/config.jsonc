@@ -158,7 +158,7 @@
 	  "max-length": 10
   },
   "custom/weather": {
-    "exec": "${HOME}/.local/bin/get_weather.sh Campos_do_Jordao+Sao_Paulo",
+    "exec": "${HOME}/.local/bin/get_weather.sh campos_do_jordao",
     "return-type": "json",
     "format": "{}",
     "tooltip": true,
