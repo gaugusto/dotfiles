@@ -1,0 +1,66 @@
+
+@import '../../../matugen/output/wlogout_colors.css';
+
+window {
+  background-color: alpha(@background, 0.6);
+  font-size: 1.2rem;
+  color: @inverse_surface;
+}
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+  background-color: transparent;
+
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+
+  box-shadow: 0 0 10px 2px transparent;
+
+  border-radius: 36px;
+  margin: 10px;
+  color: @inverse_surface;
+}
+
+button:focus {
+  box-shadow: none;
+  outline-style: none;
+  background-size: 20%;
+}
+
+button:hover {
+  background-size: 50%;
+  outline-style: none;
+  box-shadow: 0 0 10px 3px alpha(@background, 0.4);
+  background-color: @on_primary;
+  color: transparent;
+}
+
+button:active {
+  background-color: @on_tertiary;
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}

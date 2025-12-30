@@ -121,18 +121,13 @@ tooltip label {
 
 @keyframes blink {
     to {
-        background-color: @on_primary;
+        background-color: @inverse_surface;
         color: black;
     }
 }
 
 #battery.warning:not(.charging) {
-    background: alpha(#f53c3c, 0.5);
-    color: @on_primary;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    background: alpha(@on_error, 0.5);
+    color: @inverse_surface;
 }
 
