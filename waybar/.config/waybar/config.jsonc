@@ -2,14 +2,14 @@
   "position": "top",
   "margin-top": 10,
   "modules-left": [
-    "clock"
+    "hyprland/workspaces"
   ],
   "modules-center": [
-    "hyprland/workspaces",
+    "clock"
   ],
   "modules-right": [
     "tray",
-    //"custom/weather",
+    "custom/weather",
     "power-profiles-daemon",
     "cpu",
     "battery",
@@ -24,8 +24,8 @@
   //   "tooltip-format": "<tt>{calendar}</tt>"
   // },
   "clock": {
-    "format": " {:%H:%M}",
-    "format-alt": " {:%H:%M  %d-%m-%Y}",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%H:%M %d-%m-%Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
@@ -49,7 +49,7 @@
     }
   },
   "hyprland/workspaces": {
-    "format": "{icon} {name}",
+    "format": "{name} {icon}",
     "format-icons": {
       "1": "",
       "2": "",
@@ -69,7 +69,7 @@
     "spacing": 10
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
@@ -95,8 +95,8 @@
   "network": {
     /*"interface": "wlp0s20f3",*/
     "format": "{ifname}",
-    "format-wifi": " {essid}",
-    "format-ethernet": "󰈀 {ifname}",
+    "format-wifi": "{essid}  ",
+    "format-ethernet": "{ifname} 󰈀 ",
     "format-disconnected": "󰈂", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰈀",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
@@ -111,7 +111,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
+    "format": "{capacity}% {icon}",
     "format-icons": [
       "",
       "",
@@ -154,7 +154,7 @@
   },
   "cpu": {
     "interval": 10,
-	  "format": " {usage}%",
+	  "format": "{usage}%  ",
 	  "max-length": 10
   },
   "custom/weather": {
