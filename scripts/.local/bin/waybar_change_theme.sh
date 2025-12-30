@@ -14,7 +14,7 @@ TARGET_DIR="$HOME/.config/waybar"
 LINK_NAME="style.css"
 
 # Seleciona o arquivo via rofi
-SELECTED_CSS=$(ls "$CSS_DIR"/*.css 2>/dev/null | xargs -n 1 basename | rofi -theme ${rofi_launcher}/${rofi_theme}.rasi -dmenu -p "Selecione o CSS:")
+SELECTED_CSS=$(ls "$CSS_DIR"/*.css 2>/dev/null | xargs -n 1 basename | rofi -theme ${rofi_launcher}/${rofi_theme}.rasi -dmenu -p "")
 
 # Se nada for selecionado, sai
 [ -z "$SELECTED_CSS" ] && exit 1
