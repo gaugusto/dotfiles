@@ -21,14 +21,14 @@
 /* @define-color text            @on_background; */
 /* @define-color text-alt        @on_primary_container; */
 
-@define-color background      alpha(@on_secondary, 0.9);
-@define-color background-alt  alpha(@on_secondary, 0.8);
-@define-color text            @on_surface;
-@define-color text-alt        @inverse_primary;
+@define-color background-princ alpha(@background, 0.9);
+@define-color background-alt   alpha(@on_secondary, 0.8);
+@define-color text             @secondary;
+@define-color text-alt         @secondary_fixed;
 
-@define-color selected        alpha(@text-alt, .4);
-@define-color hover           alpha(@selected, .4);
-@define-color urgent          @text-alt;
+@define-color selected         alpha(@text-alt, .4);
+@define-color hover            alpha(@selected, .4);
+@define-color urgent           @text-alt;
 
 * {
   color: @text;
@@ -42,12 +42,12 @@
 .notification {
   padding: 0 5px;
   border-radius: 15px;
-  border: 2px solid @background;
+  border: 2px solid @background-princ;
   color: @text;
 }
 
 .notification-background {
-  background: @background;
+  background: @background-princ;
   box-shadow: none;
   border-radius: 15px;
   margin: 8px;
@@ -135,7 +135,7 @@
 }
 
 .control-center {
-  background: @background;
+  background: @background-princ;
   border-radius: 15px;
   margin: 5px;
   padding: 12px;
@@ -333,7 +333,7 @@
 }
 
 .widget-buttons-grid button:checked > label {
-  color: @background;
+  color: @background-princ;
 }
 
 /* Change color for plaseholder when no notifications */
