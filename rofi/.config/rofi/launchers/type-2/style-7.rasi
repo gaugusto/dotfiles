@@ -60,8 +60,8 @@ inputbar {
     padding:                     15px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @on-primary;
-    background-color:            @on-primary;
+    border-color:                @on-secondary;
+    background-color:            @on-secondary;
     text-color:                  @on-surface;
     children:                    [ "prompt", "entry" ];
 }
