@@ -31,4 +31,4 @@ ln -sf "$CSS_PATH" "$LINK_PATH"
 sleep 1
 
 # Reinicia o waybar
-"$HOME/.local/bin/start_waybar.sh"
+"$HOME/.local/bin/restart-waybar.sh"
