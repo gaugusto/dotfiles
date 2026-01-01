@@ -30,7 +30,7 @@ tooltip label {
 }
 
 #workspaces {
-  background: alpha(@on_primary, 0.5);
+  background: alpha(@on_primary, 0.8);
   margin: 0px 0px;
   padding: 5px 0px;
   border: none;
@@ -39,7 +39,7 @@ tooltip label {
 }
 
 #workspaces button {
-  color: alpha(@on_surface, 0.5);
+  color: alpha(@on_surface, 0.8);
   margin: 0 5px;
   padding: 0px 15px;
   border-radius: 10px;
@@ -48,7 +48,7 @@ tooltip label {
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: alpha(@on_primary, 0.8);
+  background: alpha(@on_primary, 0.8);
   color: @on_surface;
   border-radius: 10px;
   text-shadow: none;

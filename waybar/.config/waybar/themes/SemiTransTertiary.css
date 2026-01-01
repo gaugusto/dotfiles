@@ -11,12 +11,12 @@
     min-height: 0;
     padding: 0;
     margin: 0;
-    text-shadow: 0 0 2px @shadow, 0 0 2px @shadow;
 }
 
 window#waybar {
   background: transparent;
   color: @on_surface;
+  text-shadow: 0 0 3px @shadow, 0 0 1px @shadow;
 }
 
 tooltip {
@@ -30,34 +30,42 @@ tooltip label {
 }
 
 #workspaces {
+  background: alpha(@on_tertiary, 0.8);
   margin: 0px 0px;
   padding: 5px 0px;
   border: none;
   border-radius: 10px;
+  text-shadow: none;
 }
 
 #workspaces button {
+  color: alpha(@on_surface, 0.8);
   margin: 0 5px;
-  padding: 0 15px;
-  border-radius: 10px;
-}
-
-#workspaces button.focused,
-#workspaces button.active {
-  background-color: alpha(@on_primary, 0.8);
+  padding: 0px 15px;
   border-radius: 10px;
   text-shadow: none;
 }
 
+#workspaces button.focused,
+#workspaces button.active {
+  background: alpha(@on_tertiary, 0.8);
+  color: @on_surface;
+  border-radius: 10px;
+  text-shadow: none;
+  text-shadow: 0 0 3px @shadow, 0 0 1px @shadow;
+}
+
 #workspaces button.urgent {
-  background-color: alpha(@error_container, 0.5);
+  background-color: alpha(@error_container, 0.6);
   border-radius: 10px;
 }
 
 #workspaces button:hover {
+  color: @on_surface;
   box-shadow: inherit;
   text-shadow: inherit;
-  background: alpha(@on_primary, 0.5);
+  background: alpha(@on_tertiary, 0.5);
+  text-shadow: 0 0 3px @shadow, 0 0 1px @shadow;
 }
 
 #battery,
@@ -69,7 +77,7 @@ tooltip label {
 #cpu,
 #custom-weather,
 #custom-nvidia {
-  background: transparent;
+  background: alpha(@on_tertiary, 0.8);
   padding: 2px 10px;
   margin: 2px 5px;
   border-radius: 10px;
@@ -84,7 +92,7 @@ tooltip label {
 #cpu:hover,
 #custom-weather:hover,
 #custom-nvidia:hover {
-  background: alpha(@on_primary, 0.8);
+  background: @on_tertiary;
   text-shadow: none;
 }
 
