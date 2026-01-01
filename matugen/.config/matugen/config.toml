@@ -18,9 +18,9 @@ input_path = './templates/kitty-colors.conf'
 output_path = '~/.config/matugen/output/kitty_colors.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
 
-[templates.wlogout]
-input_path = './templates/colors.css'
-output_path = '~/.config/matugen/output/wlogout_colors.css'
+# [templates.wlogout]
+# input_path = './templates/colors.css'
+# output_path = '~/.config/matugen/output/wlogout_colors.css'
 
 [templates.rofi]
 input_path = './templates/rofi.rasi'

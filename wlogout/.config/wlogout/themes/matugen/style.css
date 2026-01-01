@@ -1,7 +1,7 @@
 /* -----------------------------------------------------
  * Import one-dark colors
  * ----------------------------------------------------- */
-@import '../../../matugen/output/wlogout_colors.css';
+@import '../../../matugen/output/waybar_colors.css';
 
 /* -----------------------------------------------------
  * General
@@ -15,21 +15,21 @@
 }
 
 window {
-	background-color: alpha(@background, 0.9);
+	background-color: alpha(@background, 0.8);
   background-size: cover;
 	font-size: 16pt;
 }
 
 button {
-	color: @fg0;
+	color: @primary;
 	
   background-repeat: no-repeat;
 	background-position: center;
 	background-size: 20%;
-	background-color: alpha(@surface, 0.5);
+	background-color: alpha(@on_primary, 0.3);
 	
   border-radius: 80px; /* Increased border radius jfor a more rounded look */
-	border: 3px solid @on_surface;
+	border: 3px solid @on_primary;
 
   transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
   animation: gradient_f 20s ease-in infinite;
@@ -40,7 +40,7 @@ button {
 button:focus,
 button:active {
 	background-color: alpha(@on_secondary, 0.8);
-  color: @on_surface;
+  color: @secondary;
   border: 3px solid @surface_tint;
   font-weight: bold;
 }
