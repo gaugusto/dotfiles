@@ -103,6 +103,10 @@ tooltip label {
     background-color: alpha(#26A65B, 0.5);
 }
 
+#battery.charging:hover {
+  background-color: alpha(@background, 0.8);
+}
+
 #power-profiles-daemon.performance {
   color: #e08c75;
 }
