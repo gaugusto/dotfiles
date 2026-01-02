@@ -21,10 +21,10 @@
 /* @define-color text            @on_background; */
 /* @define-color text-alt        @on_primary_container; */
 
-@define-color background-princ alpha(@background, 0.9);
-@define-color background-alt   alpha(@on_tertiary, 0.8);
-@define-color text             @tertiary;
-@define-color text-alt         @tertiary_fixed;
+@define-color background-princ alpha(@scrim, 0.9);
+@define-color background-alt   alpha(@background, 0.9);
+@define-color text             @primary_fixed;
+@define-color text-alt         @primary;
 
 @define-color selected         alpha(@text-alt, .4);
 @define-color hover            alpha(@selected, .4);

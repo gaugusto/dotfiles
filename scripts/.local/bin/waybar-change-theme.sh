@@ -4,11 +4,11 @@ rofi_launcher="$HOME/.config/rofi/launchers/type-2"
 rofi_theme='style-1'
 
 # Diretório onde estão os arquivos CSS
-CSS_DIR="$HOME/.config/swaync/themes"
+CSS_DIR="$HOME/.config/waybar/themes"
 
 # Diretório onde o link simbólico será criado
 # Pode ser o mesmo do CSS_DIR
-TARGET_DIR="$HOME/.config/swaync"
+TARGET_DIR="$HOME/.config/waybar"
 
 # Nome fixo do link simbólico
 LINK_NAME="style.css"
@@ -31,4 +31,4 @@ ln -sf "$CSS_PATH" "$LINK_PATH"
 sleep 1
 
 # Reinicia o waybar
-"$HOME/.local/bin/start_waybar.sh"
+"$HOME/.local/bin/restart-waybar.sh"
