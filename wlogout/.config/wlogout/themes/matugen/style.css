@@ -39,7 +39,7 @@ button {
 
 button:focus,
 button:active {
-	background-color: alpha(@inverse_on_surface, 0.8);
+	background-color: alpha(@on_primary, 0.8);
   color: @primary;
   border: 3px solid @surface_tint;
   font-weight: bold;
