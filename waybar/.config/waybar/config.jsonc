@@ -69,7 +69,7 @@
     "spacing": 10
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{icon}",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
@@ -96,8 +96,8 @@
   "network": {
     /*"interface": "wlp0s20f3",*/
     "format": "{ifname}",
-    "format-wifi": "{essid}  ",
-    "format-ethernet": "{ifname} 󰈀 ",
+    "format-wifi": "",
+    "format-ethernet": "󰈀 ",
     "format-disconnected": "󰈂", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰈀",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
@@ -112,7 +112,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
+    "format": "{icon}",
     "format-icons": [
       "",
       "",
@@ -143,7 +143,7 @@
     "escape": true
   },
   "power-profiles-daemon": {
-    "format": "{icon}",
+    "format": "<span size='12pt'>{icon}</span>",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
@@ -155,7 +155,7 @@
   },
   "cpu": {
     "interval": 10,
-	  "format": "{usage}%  ",
+	  "format": "",
 	  "max-length": 10
   },
   "custom/weather": {

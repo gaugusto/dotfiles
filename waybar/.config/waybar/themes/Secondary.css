@@ -60,7 +60,7 @@ tooltip label {
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  background-color: alpha(@background, 0.8);
+  background-color: @on_secondary;
 }
 
 #battery,
@@ -87,7 +87,7 @@ tooltip label {
 #cpu:hover,
 #custom-weather:hover,
 #custom-nvidia:hover {
-  background-color: alpha(@background, 0.8);
+  background-color: @on_secondary;
   text-shadow: none;
 }
 
