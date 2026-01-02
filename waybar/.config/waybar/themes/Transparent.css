@@ -99,12 +99,7 @@ tooltip label {
 }
 
 #battery.charging {
-    color: @on_surface;
-    background-color: alpha(#26A65B, 0.5);
-}
-
-#battery.charging:hover {
-  background-color: alpha(@background, 0.8);
+    color: alpha(#26A65B, 0.9);
 }
 
 #power-profiles-daemon.performance {

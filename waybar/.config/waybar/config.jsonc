@@ -70,6 +70,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
+    "tooltip-format": "{volume}%",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
@@ -113,6 +114,7 @@
       "critical": 15
     },
     "format": "{icon}",
+    "tooltip-format": "{capacity}%",
     "format-icons": [
       "",
       "",
