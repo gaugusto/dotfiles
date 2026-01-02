@@ -30,7 +30,7 @@ tooltip label {
 }
 
 #workspaces {
-  background: alpha(@on_tertiary, 0.8);
+  background: alpha(@on_tertiary, 0.5);
   margin: 0px 0px;
   padding: 5px 0px;
   border: none;
