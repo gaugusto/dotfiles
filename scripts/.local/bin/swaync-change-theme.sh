@@ -14,7 +14,8 @@ TARGET_DIR="$HOME/.config/swaync"
 LINK_NAME="style.css"
 
 # Seleciona o arquivo via rofi
-SELECTED_CSS=$(ls "$CSS_DIR"/*.css 2>/dev/null | xargs -n 1 basename | rofi -theme ${rofi_launcher}/${rofi_theme}.rasi -dmenu -p "")
+#SELECTED_CSS=$(ls "$CSS_DIR"/*.css 2>/dev/null | xargs -n 1 basename | rofi -theme ${rofi_launcher}/${rofi_theme}.rasi -dmenu -p "")
+SELECTED_CSS=$(ls "$CSS_DIR"/*.css 2>/dev/null | xargs -n 1 basename | walker -d)
 
 # Se nada for selecionado, sai
 [ -z "$SELECTED_CSS" ] && exit 1

@@ -13,7 +13,7 @@
     margin: 0;
 
     color: alpha(@primary_fixed, 0.8);
-    text-shadow: 0 0 2px @shadow, 0 0 2px @shadow;
+    /* text-shadow: 0 0 2px @shadow, 0 0 2px @shadow; */
 }
 
 window#waybar {
@@ -49,7 +49,7 @@ tooltip label {
 #workspaces button.active {
   background-color: alpha(@on_secondary, 0.8);
   border-radius: 10px;
-  text-shadow: none;
+  /* text-shadow: none; */
 }
 
 #workspaces button.urgent {
@@ -59,7 +59,7 @@ tooltip label {
 
 #workspaces button:hover {
   box-shadow: inherit;
-  text-shadow: inherit;
+  /* text-shadow: inherit; */
   background-color: @on_secondary;
 }
 
@@ -88,7 +88,7 @@ tooltip label {
 #custom-weather:hover,
 #custom-nvidia:hover {
   background-color: @on_secondary;
-  text-shadow: none;
+  /* text-shadow: none; */
 }
 
 #workspaces {

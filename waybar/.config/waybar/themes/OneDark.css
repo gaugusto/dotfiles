@@ -83,7 +83,8 @@ tooltip label {
 #power-profiles-daemon,
 #cpu,
 #custom-weather,
-#custom-nvidia {
+#custom-nvidia,
+#custom-pacman {
   background-color: alpha(@bg0, 0.8);
   padding: 0 15px 0 15px;
   margin: 0 5px;
