@@ -1,7 +1,7 @@
 [config.wallpaper]
 set = true
 command = "swww"
-arguments = ["img", "--transition-type", "wipe"]
+arguments = ["img", "--transition-type", "wave"]
 
 [templates.hyprland]
 input_path = './templates/hyprland-colors.conf'

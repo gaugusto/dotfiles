@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "margin-top": 10,
+  "margin-top": 5,
   "modules-left": [
     "hyprland/workspaces",
   ],
@@ -28,7 +28,7 @@
     "format-alt": "{:%H:%M %d-%m-%Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
-      "mode": "year",
+      "mode": "mouth",
       "mode-mon-col": 3,
       // "weeks-pos": "right",
       "on-scroll": 1,
