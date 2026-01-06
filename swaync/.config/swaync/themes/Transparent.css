@@ -42,7 +42,7 @@
 .notification {
   padding: 0 5px;
   border-radius: 15px;
-  border: 2px solid @background-princ;
+  border: 2px solid @on_surface;
   color: @text;
 }
 
