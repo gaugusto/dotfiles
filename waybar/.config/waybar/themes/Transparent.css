@@ -90,6 +90,10 @@ tooltip label {
   text-shadow: none;
 }
 
+/* #clock { */
+/*   background-color: alpha(@surface, 0.8) */
+/* } */
+
 #workspaces {
   margin-left: 10px;
 }

@@ -2,7 +2,7 @@
   "position": "top",
   "margin-top": 5,
   "modules-left": [
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "clock"
@@ -24,8 +24,8 @@
   //   "tooltip-format": "<tt>{calendar}</tt>"
   // },
   "clock": {
-    "format": " {:%I:%M %p} ",
-    "format-alt": "{:%H:%M %d-%m-%Y}",
+    "format": "{:%I:%M %p} ",
+    "format-alt": "{:%H:%M %d-%m-%Y} ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "mouth",
@@ -40,12 +40,12 @@
         "today": "<span color='#ffcc66'><b>{}</b></span>"
       }
     },
-    "actions":  {
+    "actions": {
       "on-click-right": "mode",
       "on-scroll-up": "tz_up",
-      "on-scroll-down": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down" 
+      "on-scroll-down": "tz_down"
+      // "on-scroll-up": "shift_up",
+      // "on-scroll-down": "shift_down" 
     }
   },
   "hyprland/workspaces": {
@@ -55,9 +55,9 @@
       "2": "",
       "3": "",
       "4": "",
-      "5": "",
-      "active": "",
-      "default": ""
+      "5": ""
+      // "active": "",
+      // "default": ""
     },
     "persistent-workspaces": {
       "*": 5
@@ -76,7 +76,6 @@
       "headphone": "",
       "hands-free": "",
       "headset": "",
-      "hands-free": "",
       "phone": "",
       "phone-muted": "",
       "portable": "",
@@ -156,15 +155,15 @@
   },
   "cpu": {
     "interval": 10,
-	  "format": "",
-	  "max-length": 10
+    "format": "",
+    "max-length": 10
   },
   "custom/weather": {
     "exec": "${HOME}/.local/bin/get-weather.sh campos_do_jordao",
     "return-type": "json",
     "format": "{}",
     "tooltip": true,
-    "interval": 10800 
+    "interval": 10800
   },
   "custom/nvidia": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu,temperature.gpu --format=csv,nounits,noheader | sed 's/\\([0-9]\\+\\), \\([0-9]\\+\\)/\\1% 🌡️\\2°C/g'",
@@ -172,4 +171,3 @@
     "interval": 5
   }
 }
-
