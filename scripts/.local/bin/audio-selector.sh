@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Rofi
-rofi_launcher="$HOME/.config/rofi/launchers/type-2"
-rofi_theme='style-1'
-
 # 1. Obtém os dados via pactl e formata para o Rofi (Descrição | Nome Técnico)
 # Usamos o "|" como separador para facilitar o 'cut' depois
 #escolha=$(pactl --format=json list sinks | jq -r '.[] | "\(.description) | \(.name)"' | rofi -theme ${rofi_launcher}/${rofi_theme}.rasi -dmenu -p "Saída de Áudio:" -i)

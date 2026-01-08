@@ -103,7 +103,7 @@
     "tooltip-format-ethernet": "{ipaddr} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "~/.local/bin/nm-dmenu.sh"
+    "on-click": "networkmanager_dmenu"
   },
   "battery": {
     "interval": 60,
