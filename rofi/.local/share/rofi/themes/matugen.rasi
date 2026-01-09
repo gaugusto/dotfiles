@@ -1,7 +1,7 @@
 /* ROUNDED THEME FOR ROFI */
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
-//@import "~/.config/matugen/output/rofi_colors.rasi"
+@import "~/.config/matugen/output/rofi_colors.rasi"
 
 // * {
 //     bg0:    #2E3440;
@@ -14,16 +14,16 @@
 //     fg3:    #4C566A;
 // }
 
-* {
-    bg0:    #313244;
-    bg1:    #45475a;
-    bg2:    #585b70;
-    bg3:    #cba6f7;
-    fg0:    #f5c2e7;
-    fg1:    #b4befe;
-    fg2:    #74c7ec;
-    fg3:    #585b70;
-}
+// * {
+//     bg0:    #313244;
+//     bg1:    #45475a;
+//     bg2:    #585b70;
+//     bg3:    #cba6f7;
+//     fg0:    #f5c2e7;
+//     fg1:    #b4befe;
+//     fg2:    #74c7ec;
+//     fg3:    #585b70;
+// }
 /* ROUNDED THEME FOR ROFI */
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
@@ -31,7 +31,7 @@
     font:   "JetBrainsMono Nerd Font Propo 12";
 
     background-color:   transparent;
-    text-color:         @fg0;
+    text-color:         @on-surface;
 
     margin:     0px;
     padding:    0px;
@@ -44,7 +44,7 @@ window {
     width:          480;
     border-radius:  24px;
 
-    background-color:   @bg0;
+    background-color:   @surface;
 }
 
 mainbox {
@@ -52,8 +52,8 @@ mainbox {
 }
 
 inputbar {
-    background-color:   @bg1;
-    border-color:       @bg3;
+    background-color:   @surface;
+    border-color:       @surface-container;
 
     border:         3px;
     border-radius:  16px;
@@ -64,19 +64,20 @@ inputbar {
 }
 
 prompt {
-    text-color: @fg2;
+    text-color: @tertiary;
 }
 
 entry {
     placeholder:        "Search";
-    placeholder-color:  @fg3;
+    placeholder-color:  @on-secondary;
+    text-color:         @on-surface;
 }
 
 message {
     margin:             12px 0 0;
     border-radius:      16px;
-    border-color:       @bg2;
-    background-color:   @bg2;
+    border-color:       @surface;
+    background-color:   @surface;
 }
 
 textbox {
@@ -100,15 +101,15 @@ element {
 }
 
 element normal active {
-    text-color: @bg3;
+    text-color: @tertiary;
 }
 
 element alternate active {
-    text-color: @bg3;
+    text-color: @tertiary;
 }
 
 element selected normal, element selected active {
-    background-color:   @bg3;
+    background-color:   @on-tertiary;
 }
 
 element-icon {
@@ -121,7 +122,7 @@ element-text {
 }
 
 element selected {
-    text-color: @bg1;
+    text-color: @tertiary;
 }
 
 
