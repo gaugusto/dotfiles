@@ -4,17 +4,6 @@
 @import "~/.config/matugen/output/rofi_colors.rasi"
 
 // * {
-//     bg0:    #2E3440;
-//     bg1:    #3B4252;
-//     bg2:    #4C566A;
-//     bg3:    #88C0D0;
-//     fg0:    #D8DEE9;
-//     fg1:    #ECEFF4;
-//     fg2:    #D8DEE9;
-//     fg3:    #4C566A;
-// }
-
-// * {
 //     bg0:    #313244;
 //     bg1:    #45475a;
 //     bg2:    #585b70;
@@ -31,7 +20,7 @@
     font:   "JetBrainsMono Nerd Font Propo 12";
 
     background-color:   transparent;
-    text-color:         @on-surface;
+    text-color:         @primary-fixed;
 
     margin:     0px;
     padding:    0px;
@@ -109,7 +98,7 @@ element alternate active {
 }
 
 element selected normal, element selected active {
-    background-color:   @on-tertiary;
+    background-color:   @on-secondary;
 }
 
 element-icon {
