@@ -12,12 +12,12 @@
     padding: 0;
     margin: 0;
 
-    color: alpha(@primary_fixed, 0.8);
     /* text-shadow: 0 0 2px @shadow, 0 0 2px @shadow; */
 }
 
 window#waybar {
   background: transparent;
+  color: alpha(@secondary_fixed, 0.8);
 }
 
 tooltip {
@@ -39,7 +39,8 @@ tooltip label {
 }
 
 #workspaces button {
-  background-color: alpha(@on_secondary, 0.5);
+  background-color: alpha(@on_secondary, 0.2);
+  color: alpha(@secondary_fixed, 0.2);
   margin: 0 5px;
   padding: 0 15px;
   border-radius: 10px;
@@ -49,6 +50,7 @@ tooltip label {
 #workspaces button.active {
   background-color: alpha(@on_secondary, 0.8);
   border-radius: 10px;
+  color: @secondary_fixed;
   /* text-shadow: none; */
 }
 
