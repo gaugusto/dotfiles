@@ -18,6 +18,8 @@
 window#waybar {
   color: alpha(@primary_fixed, 0.8);
   background: transparent;
+  /* background: alpha(@background, 0.3); */
+  /* border-radius: 10px; */
 }
 
 tooltip {
