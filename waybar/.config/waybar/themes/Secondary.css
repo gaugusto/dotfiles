@@ -73,7 +73,8 @@ tooltip label {
 #power-profiles-daemon,
 #cpu,
 #custom-weather,
-#custom-nvidia {
+#custom-nvidia,
+#memory {
   background: alpha(@on_secondary, 0.8);
   padding: 2px 10px;
   margin: 2px 5px;
@@ -88,7 +89,8 @@ tooltip label {
 #power-profiles-daemon:hover,
 #cpu:hover,
 #custom-weather:hover,
-#custom-nvidia:hover {
+#custom-nvidia:hover,
+#memory:hover {
   background-color: @on_secondary;
   /* text-shadow: none; */
 }

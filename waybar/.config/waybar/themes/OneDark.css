@@ -84,7 +84,8 @@ tooltip label {
 #cpu,
 #custom-weather,
 #custom-nvidia,
-#custom-pacman {
+#custom-pacman,
+#memory {
   background-color: alpha(@bg0, 0.8);
   padding: 0 15px 0 15px;
   margin: 0 5px;

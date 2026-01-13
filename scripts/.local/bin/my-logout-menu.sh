@@ -12,8 +12,8 @@ hibernate="󰒄 Hibernate"
 options="$lock\n$logout\n$reboot\n$shutdown\n$suspend\n$hibernate"
 
 # Exibe o menu usando Rofi e captura a escolha do usuário
-chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power Menu:" -lines 6)"
-#chosen="$(echo -e "$options" | walker -d -p 'Power menu')"
+#chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power Menu:" -lines 6)"
+chosen="$(echo -e "$options" | walker -d -H -N)"
 
 # Executa a ação baseada na escolha
 case $chosen in

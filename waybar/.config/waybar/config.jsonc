@@ -14,20 +14,15 @@
     // "custom/weather",
     "power-profiles-daemon",
     "cpu",
+    "memory",
     "battery",
     "pulseaudio",
     "network",
     "custom/notification"
   ],
-  // "clock": {
-  //   "interval": 60,
-  //   "tooltip": true,
-  //   "format": " {:%H:%M  %d-%m-%Y}",
-  //   "tooltip-format": "<tt>{calendar}</tt>"
-  // },
   "clock": {
     "format": "{:%I:%M %p}",
-    "format-alt": "{:%H:%M %d-%m-%Y}",
+    "format-alt": "{:%H:%M %p - %d-%m-%Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "mouth",
@@ -51,14 +46,15 @@
     }
   },
   "hyprland/workspaces": {
-    "format": "{name} {icon}",
+    "format": "{icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      // "active": "",
+      // "1": "",
+      // "2": "",
+      // "3": "",
+      // "4": "",
+      // "5": "",
+      "urgent": "",
+      "active": "",
       "default": ""
     },
     "persistent-workspaces": {
@@ -159,6 +155,10 @@
     "interval": 10,
     "format": "",
     "max-length": 10
+  },
+  "memory": {
+    "format": "",
+    "tooltip": true
   },
   "custom/weather": {
     "exec": "${HOME}/.local/bin/get-weather.sh campos_do_jordao",

@@ -42,7 +42,8 @@
 .notification {
   padding: 0 5px;
   border-radius: 15px;
-  border: 2px solid @on_surface;
+  /* border: 2px solid @on_surface; */
+  border: none;
   color: @text;
 }
 
@@ -233,7 +234,7 @@
 .widget-backlight trough {
   background: @hover;
   margin-left: 8px;
-  border-radius: 12px;  
+  border-radius: 12px;
 }
 
 .widget-volume highlight,
