@@ -1,0 +1,126 @@
+#!/bin/bash
+
+# Aborta o script em caso de erro
+set -e
+
+PACKAGES=(
+  adapta-gtk-theme
+  adw-gtk-theme
+  alsa-utils
+  amd-ucode
+  arc-gtk-theme
+  archlinux-wallpaper
+  asciiquarium
+  baobab
+  base
+  bat
+  bazaar
+  blueman
+  bluez-utils
+  brightnessctl
+  btop
+  cantarell-fonts
+  chaotic-keyring
+  chaotic-mirrorlist
+  cliphist
+  cmatrix
+  cnijfilter2
+  dconf-editor
+  edk2-shell
+  efibootmgr
+  elephant
+  elephant-archlinuxpkgs
+  elephant-calc
+  elephant-clipboard
+  elephant-desktopapplications
+  elephant-files
+  elephant-runner
+  elephant-symbols
+  elephant-unicode
+  elephant-windows
+  eza
+  fastfetch
+  gamemode
+  gemini-cli
+  gnome-boxes
+  gnome-calculator
+  gnome-disk-utility
+  gnome-software
+  gparted
+  gst-plugin-va
+  helvum
+  htop
+  hypridle
+  hyprlauncher
+  hyprlock
+  hyprpaper
+  hyprshot
+  kitty
+  lazygit
+  libratbag
+  libva-nvidia-driver
+  libva-utils
+  linux-zen
+  lua51
+  luarocks
+  mangohud
+  materia-gtk-theme
+  matugen
+  mesa-utils
+  mpv
+  nautilus-image-converter
+  nautilus-open-any-terminal
+  networkmanager-dmenu
+  nitch
+  nvidia-open-dkms
+  nvtop
+  nwg-look
+  pacman-contrib
+  pass
+  pavucontrol
+  plymouth-theme-catppuccin-mocha-git
+  polkit-gnome
+  power-profiles-daemon
+  qpwgraph
+  qt6ct
+  rofimoji
+  rygel
+  sbctl
+  spotify-launcher
+  starship
+  steam
+  stow
+  swaync
+  swayosd
+  swww
+  transmission-cli
+  tree-sitter-cli
+  ttf-jetbrains-mono
+  ufw
+  vdpauinfo
+  ventoy-bin
+  vscodium
+  vulkan-tools
+  walker
+  waybar
+  wget
+  wlogout
+  yay
+  yazi
+  zram-generator
+
+  flatpak
+  greetd
+  gredtd-regreet
+  bash-completion
+  timeshift
+  vim
+  wlctl-bin
+  ripgrep
+)
+
+sudo pacman -Syy
+
+for package in "${PACKAGES[@]}"; do
+  yay -S --noconfirm --needed "$package"
+done
