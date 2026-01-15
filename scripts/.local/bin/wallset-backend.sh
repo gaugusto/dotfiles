@@ -11,4 +11,4 @@ swww img "$IMAGE" --transition-type="center" --transition-step=1 --transition-fp
 
 matugen image "$IMAGE"
 
-notify-send "Theme applied" "Wallpaper and theme updated successfully!"
+notify-send "Theme applied" "Wallpaper and theme updated successfully!" -n avatar-default

@@ -24,4 +24,4 @@ for i in $inputs; do
 done
 
 # Notificação visual
-notify-send "Áudio" "Saída alterada para: $sink_nome" --icon=audio-speakers
+notify-send "Áudio" "Saída alterada para: $sink_nome" --icon=audio-speakers -n avatar-default

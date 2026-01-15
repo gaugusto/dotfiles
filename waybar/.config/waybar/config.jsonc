@@ -1,31 +1,93 @@
+// -*- mode: jsonc -*-
 {
-  "position": "top",
-  // "width": 1080,
+  "layer": "top",
   "margin-top": 5,
-  "reload_style_on_change": true,
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
+  "position": "top",
+  "height": 35,
+  // "width": 900,
+  "spacing": 9,
+  "modules-left": [],
   "modules-center": [
-    "clock"
-  ],
-  "modules-right": [
-    "tray",
-    // "custom/weather",
-    "power-profiles-daemon",
-    "cpu",
-    "memory",
-    "battery",
+    "clock",
     "pulseaudio",
     "network",
-    "custom/notification"
+    "idle_inhibitor",
+    "hyprland/workspaces",
+    "power-profiles-daemon",
+    // "cpu",
+    // "memory",
+    "backlight",
+    // "battery",
+    "group/hardware",
+    "custom/notification",
+    "tray",
   ],
+  "modules-right": [],
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "cpu",
+      "memory"
+    ]
+  },
+  // Modules configuration
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      // "1": "",
+      // "2": "",
+      // "3": "",
+      // "4": "",
+      // "5": "",
+      // "urgent": "",
+      // "active": "",
+      // "default": "",
+      "urgent": "",
+      "active": "",
+      "default": "",
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    // "icons": {
+    //   "blueman": "bluetooth",
+    //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+    // }
+  },
   "clock": {
     "format": "{:%I:%M %p}",
-    "format-alt": "{:%H:%M %p - %d-%m-%Y}",
+    "format-alt": "{:%I:%M %p - %Y-%m-%d}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
-      "mode": "mouth",
+      "mode": "month",
       "mode-mon-col": 3,
       // "weeks-pos": "right",
       "on-scroll": 1,
@@ -39,87 +101,108 @@
     },
     "actions": {
       "on-click-right": "mode",
-      "on-scroll-up": "tz_up",
-      "on-scroll-down": "tz_down"
-      // "on-scroll-up": "shift_up",
-      // "on-scroll-down": "shift_down" 
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
   },
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      // "1": "",
-      // "2": "",
-      // "3": "",
-      // "4": "",
-      // "5": "",
-      "urgent": "",
-      "active": "",
-      //"default": ""
-      "default": ""
-    },
-    "persistent-workspaces": {
-      "*": 5
-    }
+  "cpu": {
+    "format": "",
+    "tooltip": true
   },
-  "tray": {
-    "icon-size": 21,
-    "spacing": 10
+  "memory": {
+    "format": "",
+    "tooltip": true
   },
-  "pulseaudio": {
-    "format": "{icon}",
-    "tooltip-format": "{volume}%",
-    "format-bluetooth": "{volume}% {icon}",
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "phone-muted": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        ""
-      ]
-    },
-    "scroll-step": 1,
-    "on-click": "~/.local/bin/audio-selector.sh",
-    "on-click-right": "pavucontrol",
-    "ignored-sinks": [
-      "Easy Effects Sink"
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": [
+      ""
     ]
   },
-  "network": {
-    /*"interface": "wlp0s20f3",*/
-    "format": "{ifname}",
-    "format-wifi": "",
-    "format-ethernet": "󰈀",
-    "format-disconnected": "󰈂", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} 󰈀",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ipaddr} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
-    "on-click": "networkmanager_dmenu"
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon}",
+    "tooltip": true,
+    "tooltip-format": "{percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "battery": {
-    "interval": 60,
     "states": {
+      // "good": 95,
       "warning": 30,
       "critical": 15
     },
     "format": "{icon}",
-    "tooltip-format": "{capacity}%",
+    "format-full": "{icon}",
+    "format-charging": "󰚥",
+    "format-plugged": "󰚥",
+    "format-alt": "{capacity}% {icon}",
     "format-icons": [
       "",
       "",
       "",
       "",
       ""
-    ],
-    "max-length": 25
+    ]
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "󰈂",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "on-click": "kitty -e wlctl",
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}",
+    "tooltip-format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": "",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click-right": "pavucontrol",
+    "on-click": "~/.local/bin/audio-selector.sh",
   },
   "custom/notification": {
     "tooltip": true,
@@ -140,37 +223,5 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
-  "power-profiles-daemon": {
-    "format": "<span size='12pt'>{icon}</span>",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
-  },
-  "cpu": {
-    "interval": 10,
-    "format": "",
-    "max-length": 10
-  },
-  "memory": {
-    "format": "",
-    "tooltip": true
-  },
-  "custom/weather": {
-    "exec": "${HOME}/.local/bin/get-weather.sh campos_do_jordao",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "interval": 10800
-  },
-  "custom/nvidia": {
-    "exec": "nvidia-smi --query-gpu=utilization.gpu,temperature.gpu --format=csv,nounits,noheader | sed 's/\\([0-9]\\+\\), \\([0-9]\\+\\)/\\1% 🌡️\\2°C/g'",
-    "format": "{} 🖥️",
-    "interval": 5
   }
 }
