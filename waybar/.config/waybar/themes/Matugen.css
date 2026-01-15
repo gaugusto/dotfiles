@@ -43,7 +43,7 @@ tooltip label {
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: alpha(@tertiary, 0.6);
+  background-color: alpha(@secondary, 0.9);
   border: none;
   min-width: 40px;
   margin: 4px 4px;
@@ -60,7 +60,7 @@ tooltip label {
   background: inherit;
   text-shadow: inherit;
 
-  background-color: alpha(@secondary, 0.6);
+  background-color: alpha(@tertiary, 0.9);
   border: none;
   min-width: 40px;
 }
@@ -102,7 +102,7 @@ tooltip label {
 #clock:hover,
 #tray:hover,
 #custom-notification:hover {
-  color: @on_secondary;
+  color: @on_tertiary;
   background-color: @tertiary;
 }
 
