@@ -55,7 +55,8 @@
       // "5": "",
       "urgent": "",
       "active": "",
-      "default": ""
+      //"default": ""
+      "default": ""
     },
     "persistent-workspaces": {
       "*": 5

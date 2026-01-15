@@ -10,6 +10,7 @@
   min-height: 0;
   padding: 0;
   margin: 0;
+  text-shadow: 0 0 2px @shadow, 0 0 2px @shadow;
 }
 
 window#waybar {
@@ -19,9 +20,8 @@ window#waybar {
 }
 
 tooltip {
-  background: @background;
-  /* border: 2px solid @scrim; */
-  border: none;
+  background: darker(@background);
+  border: 3px solid darker(@inverse_on_surface);
   border-radius: 15px;
 }
 
@@ -42,29 +42,30 @@ tooltip label {
 }
 
 #workspaces button {
-  background-color: alpha(@surface, 0.8);
+  background-color: darker(@source_color);
   padding: 0px 6px;
   margin: 0px 5px;
   border-radius: 15px;
-  min-width: 25px;
-  color: transparent;
+  min-width: 35px;
+  color: @primary_fixed;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active,
 #workspaces button.urgent {
-  background-color: alpha(@surface, 0.8);
+  background-color: @surface; 
   color: @primary_fixed;
-  min-width: 45px;
+  min-width: 65px;
   transition: all 0.3s ease-in-out;
   font-size: 13px;
+
 }
 
 #workspaces button:hover {
-  /* background-color: alpha(@on_secaondary, 0.8); */
-  color: alpha(@primary_fixed, 0.9);
+  background-color: @surface;
+  color: @primary_fixed;
   border-radius: 15px;
-  min-width: 45px;
+  min-width: 65px;
   background-size: 400% 400%;
 }
 
@@ -79,7 +80,8 @@ tooltip label {
 #custom-nvidia,
 #custom-pacman,
 #memory {
-  background-color: alpha(@surface, 0.9);
+ /* background-color: alpha(@surface, 0.9);*/
+  background-color: darker(@source_color);
   padding: 0 15px 0 15px;
   margin: 0 5px;
   border-radius: 15px;
@@ -97,7 +99,7 @@ tooltip label {
 #custom-nvidia:hover,
 #custom-pacman:hover,
 #memory:hover {
-  background-color: alpha(@surface, 0.8);
-  color: alpha(@primary_fixed, 0.9);
+  background-color: @surface;
+  color: @primary_fixed;
 }
 
