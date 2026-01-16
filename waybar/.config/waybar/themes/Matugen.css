@@ -43,8 +43,7 @@ tooltip label {
 
 #workspaces button.focused,
 #workspaces button.active {
-  /* background-color: alpha(@secondary, 0.9); */
-  background: linear-gradient(45deg, @primary 0%, @on_primary 100%);
+  background-color: lighter(@on_secondary);
   border: none;
   min-width: 40px;
   margin: 4px 4px;
@@ -62,7 +61,7 @@ tooltip label {
   text-shadow: inherit;
 
   /* background-color: alpha(@tertiary, 0.9); */
-  background: linear-gradient(45deg, @tertiary 0%, @on_tertiary 100%);
+  background: darker(@on_secondary);
   border: none;
   min-width: 40px;
 }
