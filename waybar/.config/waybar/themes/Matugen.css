@@ -43,7 +43,8 @@ tooltip label {
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: alpha(@secondary, 0.9);
+  /* background-color: alpha(@secondary, 0.9); */
+  background: linear-gradient(45deg, @primary 0%, @on_primary 100%);
   border: none;
   min-width: 40px;
   margin: 4px 4px;
@@ -60,7 +61,8 @@ tooltip label {
   background: inherit;
   text-shadow: inherit;
 
-  background-color: alpha(@tertiary, 0.9);
+  /* background-color: alpha(@tertiary, 0.9); */
+  background: linear-gradient(45deg, @tertiary 0%, @on_tertiary 100%);
   border: none;
   min-width: 40px;
 }
@@ -104,58 +106,6 @@ tooltip label {
 #custom-notification:hover {
   color: @on_tertiary;
   background-color: @tertiary;
+  /* background: linear-gradient(45deg, @tertiary 0%, @on_tertiaty 100%); */
 }
-
-/* #idle_inhibitor { */
-/*   color: @pink; */
-/* } */
-/**/
-/* #pulseaudio { */
-/*   color: @secondary; */
-/* } */
-/**/
-/* #network { */
-/*   color: @red; */
-/* } */
-/**/
-/* #power-profiles-daemon { */
-/*   color: @maroon; */
-/* } */
-/**/
-/* #cpu { */
-/*   color: @peach; */
-/* } */
-/**/
-/* #memory { */
-/*   color: @yellow; */
-/* } */
-/**/
-/* #temperature { */
-/*   color: @green; */
-/* } */
-/**/
-/* #backlight { */
-/*   color: @green; */
-/* } */
-/**/
-/* #keyboard-state { */
-/*   color: @teal; */
-/* } */
-/**/
-/* #battery { */
-/*   color: @sky; */
-/* } */
-/**/
-/* #clock { */
-/*   color: @sapphire; */
-/* } */
-/**/
-/* #tray { */
-/*   color: @blue; */
-/* } */
-/**/
-/* #custom-notification { */
-/*   color: @lavender; */
-/*   margin-right: 10px; */
-/* } */
 
