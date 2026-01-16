@@ -24,14 +24,14 @@ tooltip label {
 
 #workspaces {
   /* margin-left: 10px; */
-  background-color: alpha(@background, 0.6);
+  background-color: alpha(@background, 0.8);
   border-radius: 100px;
   padding: 0 10px;
 }
 
 #workspaces button {
   padding: 0 10px;
-  background-color: alpha(@outline, 0.4);
+  background-color: alpha(@outline, 0.2);
   border: none;
   border-radius: 100px;
   min-width: 20px;
@@ -86,7 +86,7 @@ tooltip label {
 #custom-notification {
   padding: 0 10px;
   border-radius: 15px;
-  background-color: alpha(@background, 0.6);
+  background-color: alpha(@background, 0.8);
   min-width: 25px;
   color: alpha(@secondary, 0.9);
 }
