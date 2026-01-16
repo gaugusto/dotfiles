@@ -43,7 +43,7 @@ tooltip label {
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: lighter(@on_secondary);
+  background-color: lighter(@inverse_primary);
   border: none;
   min-width: 40px;
   margin: 4px 4px;
