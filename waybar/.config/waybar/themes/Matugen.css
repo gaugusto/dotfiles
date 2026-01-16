@@ -104,8 +104,8 @@ tooltip label {
 #clock:hover,
 #tray:hover,
 #custom-notification:hover {
-  color: @on_tertiary;
-  background-color: @tertiary;
+  color: darker(@secondary);
+  background-color: darker(@on_secondary);
   /* background: linear-gradient(45deg, @tertiary 0%, @on_tertiaty 100%); */
 }
 
