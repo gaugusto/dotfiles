@@ -1,11 +1,16 @@
 #!/bin/bash
 
-killall -9 waybar
-killall -9 swaync
+pkill -SIGUSR2 waybar
 
-sleep 1
+swaync-client --reload-config
+swaync-client --reload-css
 
-waybar &
--disown
-swaync &
--disown
+# killall -9 waybar
+# killall -9 swaync
+#
+# sleep 1
+#
+# waybar &
+# -disown
+# swaync &
+# -disown
