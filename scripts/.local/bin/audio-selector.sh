@@ -2,8 +2,8 @@
 
 # 1. Obtém os dados via pactl e formata para o Rofi (Descrição | Nome Técnico)
 # Usamos o "|" como separador para facilitar o 'cut' depois
-escolha=$(pactl --format=json list sinks | jq -r '.[] | "\(.description) | \(.name)"' | rofi -dmenu -p "Saída de Áudio:" -i)
-#escolha=$(pactl --format=json list sinks | jq -r '.[] | "\(.description) | \(.name)"' | walker -d)
+#escolha=$(pactl --format=json list sinks | jq -r '.[] | "\(.description) | \(.name)"' | rofi -dmenu -p "Saída de Áudio:" -i)
+escolha=$(pactl --format=json list sinks | jq -r '.[] | "\(.description) | \(.name)"' | walker -d -H -N)
 
 # 2. Se o usuário cancelar (ESC), encerra o script
 if [ -z "$escolha" ]; then
