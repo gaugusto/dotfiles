@@ -1,11 +1,13 @@
 #!/bin/bash
 
 CONFIGS=(
-  "Update - pacman -Syu"
-  "List   - pacman -Qet"
-  "Clean Cache - pacman -Sc"
-  "Remove Orphans - pacman -Rs \$(pacman -Qdtq)"
-
+  "Atualizar tudo        - yay"
+  "Atualizar AUR         - yay -Sua"
+  "Estatísticas          - yay -Ps"
+  "Limpar cache          - yay -Sc"
+  "Explict Installed     - pacman -Qet"
+  "Clean pacman cache    - sudo pacman -Scc"
+  "Remove pacman orphans - sudo pacman -Rs \$(pacman -Qdtq)"
 )
 
 CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | walker -d -H)
@@ -16,4 +18,4 @@ CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | walker -d -H)
 # 1. Pega apenas o caminho (último campo)
 COMMAND=$(printf '%s\n' "${CHOICE}" | awk -F ' - ' '{print $NF}')
 
-kitty -e bash -c "pkexec $COMMAND; echo; read -p 'Pressione Enter para sair...' -n1 -s"
+kitty -e bash -c "$COMMAND; echo; read -p 'Pressione Enter para sair...' -n1 -s"
