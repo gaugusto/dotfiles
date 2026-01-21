@@ -1,59 +1,42 @@
 // -*- mode: jsonc -*-
 {
-  "layer": "top",
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
   "margin-top": 5,
-  "position": "top",
-  "height": 35,
-  // "width": 900,
-  "spacing": 9,
   "reload_style_on_change": true,
+  // "height": 35, // Waybar height (to be removed for auto height)
+  "width": 100, // Waybar width
+  "spacing": 10, // Gaps between modules (4px)
+  // Choose the order of the modules
   "modules-left": [],
   "modules-center": [
-    "clock",
-    "pulseaudio",
-    "network",
     "hyprland/workspaces",
     "idle_inhibitor",
+    "pulseaudio",
+    "network",
     "power-profiles-daemon",
-    "backlight",
-    "group/hardware",
-    "custom/notification",
-    "tray"
+    "cpu",
+    "memory",
+    "temperature",
+    "tray",
+    "clock",
+    "custom/notification"
   ],
   "modules-right": [],
-  "group/hardware": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 500,
-      "children-class": "not-power",
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "cpu",
-      "memory"
-    ]
-  },
   // Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
-    "format": "{icon}",
+    "format": "{name}",
     "format-icons": {
-      // "1": "",
-      // "2": "",
-      // "3": "",
-      // "4": "",
-      // "5": "",
-      // "urgent": "",
-      // "active": "",
-      // "default": "",
-      "urgent": "",
-      "active": "",
-      "default": ""
+      "urgent": "",
+      "focused": "",
+      "active": "",
+      "default": ""
     },
     "persistent-workspaces": {
-      "*": 5
+      "*": 3
     }
   },
   "keyboard-state": {
@@ -64,6 +47,45 @@
       "locked": "",
       "unlocked": ""
     }
+  },
+  "hyprland/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "hyprland/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": [
+      "",
+      ""
+    ],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "unknown-tag": "N/A",
+    "interval": 5,
+    "consume-icons": {
+      "on": " "
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -113,14 +135,14 @@
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
     "format-icons": [
-      ""
+      "",
+      "",
+      ""
     ]
   },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{icon}",
-    "tooltip": true,
-    "tooltip-format": "{percent}%",
+    "format": "{percent}% {icon}",
     "format-icons": [
       "",
       "",
@@ -139,11 +161,13 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}",
-    "format-full": "{icon}",
-    "format-charging": "󰚥",
-    "format-plugged": "󰚥",
-    "format-alt": "{capacity}% {icon}",
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
     "format-icons": [
       "",
       "",
@@ -164,7 +188,6 @@
     }
   },
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "",
     "format-ethernet": "󰈀",
     "format-linked": "{ifname} (No IP)",

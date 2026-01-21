@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cliphist list | walker -d | cliphist decode | wl-copy
+cliphist list | walker -d -H | cliphist decode | wl-copy

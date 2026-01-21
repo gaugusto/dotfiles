@@ -1,15 +1,9 @@
 @import "../matugen/output/waybar_colors.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo", monospace;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-window#waybar {
-  background-color: transparent;
-  /* border-radius: 10px; */
-  border: none;
+  font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 tooltip {
@@ -22,52 +16,57 @@ tooltip label {
   padding: 15px;
 }
 
-#workspaces {
-  /* margin-left: 10px; */
-  background-color: alpha(@background, 0.8);
+window#waybar {
+  background-color: alpha(@surface, 0.9);
   border-radius: 100px;
-  padding: 0 10px;
+  border: none;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 100px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px @primary;
+}
+
+#workspaces {
+  /* margin-left: 15px; */
+  /* background-color: @inverse_on_surface; */
+  border-radius: 100px;
 }
 
 #workspaces button {
-  padding: 0 10px;
-  background-color: alpha(@outline, 0.2);
-  border: none;
+  padding: 0px 10px;
+  margin: 10px 0;
+  margin-left: 15px;
+  background-color: darker(@surface_bright);
+  color: lighter(@primary);
   border-radius: 100px;
-  min-width: 20px;
-  margin: 4px 4px;
-  color: transparent;
-  /* color: alpha(@crust, 0.6); */
-  transition: all 0.3s ease-in-out
-}
-
-#workspaces button.focused,
-#workspaces button.active {
-  background-color: lighter(@inverse_primary);
-  border: none;
-  min-width: 40px;
-  margin: 4px 4px;
-}
-
-#workspaces button.urgent {
-  color: @on_error;
-  background-color: alpha(@error, 0.4);
-  border: none;
 }
 
 #workspaces button:hover {
   box-shadow: inherit;
   background: inherit;
   text-shadow: inherit;
-
-  /* background-color: alpha(@tertiary, 0.9); */
-  background: darker(@on_secondary);
-  border: none;
-  min-width: 40px;
+  background-color: @on_secondary;
 }
 
-#memory {
-  margin-right: 10px;
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: darker(@inverse_primary);
+  min-width: 40px;
+  transition: all 0.3s ease-in-out
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
 }
 
 #idle_inhibitor,
@@ -76,18 +75,14 @@ tooltip label {
 #power-profiles-daemon,
 #cpu,
 #memory,
-#temperature,
-#backlight,
-#keyboard-state,
-#battery,
-#clock,
 #tray,
+#clock,
 #custom-notification {
-  padding: 0 10px;
-  border-radius: 15px;
-  background-color: alpha(@background, 0.8);
-  min-width: 25px;
-  color: alpha(@secondary, 0.9);
+  padding: 0px 10px;
+  margin: 10px 0;
+  border-radius: 100px;
+  background-color: darker(@surface_bright);
+  color: lighter(@primary);
 }
 
 #idle_inhibitor:hover,
@@ -96,15 +91,50 @@ tooltip label {
 #power-profiles-daemon:hover,
 #cpu:hover,
 #memory:hover,
-#temperature:hover,
-#backlight:hover,
-#keyboard-state:hover,
-#battery:hover,
-#clock:hover,
 #tray:hover,
+#clock:hover,
 #custom-notification:hover {
-  color: darker(@secondary);
-  background-color: darker(@on_secondary);
-  /* background: linear-gradient(45deg, @tertiary 0%, @on_tertiaty 100%); */
+  background-color: @on_secondary;
+}
+
+#custom-notification {
+  margin-right: 15px;
+}
+
+
+/* #power-profiles-daemon.performance { */
+/*     background-color: darker(#f53c3c); */
+/* } */
+/**/
+/* #power-profiles-daemon.balanced { */
+/*     background-color: darker(#2980b9); */
+/* } */
+/**/
+/* #power-profiles-daemon.power-saver { */
+/*     background-color: darker(#2ecc71); */
+/* } */
+
+
+/* #network.disconnected { */
+/*     background-color: #f53c3c; */
+/* } */
+/**/
+/* #pulseaudio.muted { */
+/*     background-color: #90b1b1; */
+/*     color: #2a5c45; */
+/* } */
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#idle_inhibitor.activated {
+  background-color: @on_secondary;
+  color: @secondary;
 }
 

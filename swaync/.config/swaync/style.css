@@ -10,6 +10,12 @@
   --padding: calc(var(--border-radius) / 2);
 }
 
+* {
+  font-family: "Adwaita Sans", "JetBrainsMono Nerd Font Propo", monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .control-center {
   border-radius: 0;
 }
