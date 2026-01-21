@@ -17,7 +17,8 @@ tooltip label {
 }
 
 window#waybar {
-  background-color: alpha(@surface, 0.9);
+  background-color: lighter(@surface);
+  /* background-color: transparent; */
   border-radius: 100px;
   border: none;
 }
