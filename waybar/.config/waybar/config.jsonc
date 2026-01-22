@@ -20,7 +20,8 @@
     "temperature",
     "tray",
     "clock",
-    "custom/notification"
+    "custom/notification",
+    "custom/power"
   ],
   "modules-right": [],
   // Modules configuration
@@ -99,7 +100,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%a, %d %b %Y | %H:%M}",
     "format-alt": "{:%I:%M %p - %Y-%m-%d}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -239,5 +240,9 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.local/bin/logout-menu.sh"
   }
 }

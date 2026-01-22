@@ -78,7 +78,8 @@ button:hover {
 #memory,
 #tray,
 #clock,
-#custom-notification {
+#custom-notification,
+#custom-power {
   padding: 0px 10px;
   margin: 10px 0;
   border-radius: 100px;
@@ -94,11 +95,12 @@ button:hover {
 #memory:hover,
 #tray:hover,
 #clock:hover,
-#custom-notification:hover {
+#custom-notification:hover,
+#custom-power:hover {
   background-color: @on_secondary;
 }
 
-#custom-notification {
+#custom-power {
   margin-right: 15px;
 }
 
