@@ -3,7 +3,7 @@
 * {
   font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 tooltip {
@@ -17,7 +17,7 @@ tooltip label {
 }
 
 window#waybar {
-  background-color: lighter(@surface);
+  background-color: darker(@surface);
   /* background-color: transparent; */
   border-radius: 100px;
   border: none;
@@ -25,7 +25,7 @@ window#waybar {
 
 button {
   /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
+  /* box-shadow: inset 0 -3px transparent; */
   /* Avoid rounded borders under each button name */
   border: none;
   border-radius: 100px;
@@ -34,34 +34,38 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px @primary;
+  /* box-shadow: inset 0 -3px @primary; */
 }
 
 #workspaces {
-  /* margin-left: 15px; */
-  /* background-color: @inverse_on_surface; */
-  border-radius: 100px;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 0;
+  /* background-color: darker(@surface_bright); */
+  background-color: transparent;
+  /* border-radius: 100px; */
 }
 
 #workspaces button {
-  padding: 0px 10px;
-  margin: 10px 0;
-  margin-left: 15px;
-  background-color: darker(@surface_bright);
+  background-color: lighter(@surface_bright);
   color: lighter(@primary);
   border-radius: 100px;
+  margin: 10px 5px;
 }
 
 #workspaces button:hover {
   box-shadow: inherit;
   background: inherit;
   text-shadow: inherit;
-  background-color: @on_secondary;
+  background-color: darker(@inverse_primary);
+  min-width: 40px;
+  transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: darker(@inverse_primary);
+  background-color: lighter(@on_secondary);
   min-width: 40px;
   transition: all 0.3s ease-in-out
 }
