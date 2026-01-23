@@ -4,6 +4,13 @@
   font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
+
+  border: none;
+  border-radius: 0px;
+
+  min-height: 0;
+  padding: 0;
+  margin: 0;
 }
 
 tooltip {
@@ -17,7 +24,7 @@ tooltip label {
 }
 
 window#waybar {
-  background-color: darker(@surface);
+  background-color: @surface;
   /* background-color: transparent; */
   border-radius: 100px;
   border: none;
@@ -38,8 +45,6 @@ button:hover {
 }
 
 #workspaces {
-  padding: 0;
-  margin: 0;
   margin-left: 10px;
   margin-right: 0;
   /* background-color: darker(@surface_bright); */
@@ -48,10 +53,11 @@ button:hover {
 }
 
 #workspaces button {
-  background-color: lighter(@surface_bright);
+  background-color: @surface_bright;
   color: lighter(@primary);
   border-radius: 100px;
   margin: 10px 5px;
+  min-width: 30px;
 }
 
 #workspaces button:hover {
@@ -59,14 +65,14 @@ button:hover {
   background: inherit;
   text-shadow: inherit;
   background-color: darker(@inverse_primary);
-  min-width: 40px;
+  min-width: 65px;
   transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: lighter(@on_secondary);
-  min-width: 40px;
+  background-color: darker(@surface_bright);
+  min-width: 65px;
   transition: all 0.3s ease-in-out
 }
 
@@ -84,10 +90,11 @@ button:hover {
 #clock,
 #custom-notification,
 #custom-power {
-  padding: 0px 10px;
+  padding: 0 10px;
   margin: 10px 0;
   border-radius: 100px;
   background-color: darker(@surface_bright);
+  /* background-color: darker(@on_primary); */
   color: lighter(@primary);
 }
 
@@ -101,7 +108,7 @@ button:hover {
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  background-color: @on_secondary;
+  background-color: darker(@inverse_primary);
 }
 
 #custom-power {

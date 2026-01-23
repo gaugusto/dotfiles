@@ -4,7 +4,7 @@
   --border-radius: 22px;
   --cc-bg: transparent;
 
-  --widget-background: alpha(@surface_dim, 0.6);
+  --widget-background: alpha(@surface_dim, 0.8);
   --noti-bg-alpha: 0.6;
 
   --padding: calc(var(--border-radius) / 2);
