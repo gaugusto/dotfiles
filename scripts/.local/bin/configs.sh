@@ -5,6 +5,7 @@ EDITOR="kitty -e nvim"
 CONFIGS=(
   "Hyprland         ~/.config/hypr/hyprland.conf"
   "Hyprland Configs ~/.config/hypr/configs/."
+  "Niri             ~/.config/niri/."
   "Waybar           ~/.config/waybar/."
   "kitty            ~/.config/kitty/."
   "Matugen          ~/.config/matugen/."
