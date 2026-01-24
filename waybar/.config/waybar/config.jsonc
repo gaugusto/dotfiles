@@ -8,7 +8,7 @@
   "reload_style_on_change": true,
   // "height": 35, // Waybar height (to be removed for auto height)
   "width": 1344, // Waybar width
-  "spacing": 10, // Gaps between modules (4px)
+  //"spacing": 10, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces"
@@ -17,14 +17,9 @@
     "clock"
   ],
   "modules-right": [
-    "idle_inhibitor",
-    "pulseaudio",
-    "network",
-    "power-profiles-daemon",
-    "cpu",
-    "memory",
-    "temperature",
+    "group/principal",
     "tray",
+    "mpd",
     "custom/notification",
     "custom/power"
   ],
@@ -44,31 +39,22 @@
       "*": 3
     }
   },
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "unknown-tag": "N/A",
-    "interval": 5,
-    "consume-icons": {
-      "on": " "
+  "group/principal": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+      "click-to-reveal": false
     },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ",
-      "on": " "
-    },
-    "repeat-icons": {
-      "on": " "
-    },
-    "single-icons": {
-      "on": "1 "
-    },
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
+    "modules": [
+      "custom/drawer",
+      "idle_inhibitor",
+      "pulseaudio",
+      "network",
+      "power-profiles-daemon",
+      "cpu",
+      "memory"
+    ]
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -78,7 +64,7 @@
     }
   },
   "tray": {
-    "icon-size": 21,
+    "icon-size": 18,
     "spacing": 10
   },
   "clock": {
@@ -205,7 +191,7 @@
   },
   "custom/notification": {
     "tooltip": true,
-    "format": "<span size='16pt'>{icon}</span>",
+    "format": "<span size='12pt'>{icon}</span>",
     "format-icons": {
       "notification": "󱅫",
       "none": "󰂜",
@@ -226,5 +212,9 @@
   "custom/power": {
     "format": "⏻",
     "on-click": "~/.local/bin/logout-menu.sh"
+  },
+  "custom/drawer": {
+    "format": "󰇘",
+    "interval": 0
   }
 }
