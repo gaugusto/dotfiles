@@ -78,24 +78,6 @@ button:hover {
   background-color: #eb4d4b;
 }
 
-/* #custom-drawer, */
-/* #idle_inhibitor, */
-/* #pulseaudio, */
-/* #network, */
-/* #power-profiles-daemon, */
-/* #cpu, */
-/* #memory, */
-/* #tray, */
-/* #clock, */
-/* #custom-notification, */
-/* #custom-power { */
-/*   padding: 3px 10px; */
-/*   margin: 3px 0; */
-/*   border-radius: 100px; */
-/*   background-color: darker(@surface_bright); */
-/*   color: lighter(@primary); */
-/* } */
-
 #principal #custom-drawer,
 #principal #idle_inhibitor,
 #principal #pulseaudio,
@@ -110,7 +92,7 @@ button:hover {
   padding: 3px 10px;
   margin: 3px 5px;
   border-radius: 100px;
-  background-color: darker(@surface_bright);
+  background-color: @surface_bright;
   color: lighter(@primary);
 }
 
