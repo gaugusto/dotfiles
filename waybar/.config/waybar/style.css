@@ -25,22 +25,9 @@ tooltip label {
 
 window#waybar {
   background-color: alpha(@surface, 0.9);
+  /* background-color: transparent; */
   border-radius: 100px;
   border: none;
-}
-
-button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  /* box-shadow: inset 0 -3px transparent; */
-  /* Avoid rounded borders under each button name */
-  border: none;
-  border-radius: 100px;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-  background: inherit;
-  /* box-shadow: inset 0 -3px @primary; */
 }
 
 #workspaces {
@@ -75,7 +62,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: darker(#f53c3c);
 }
 
 #principal #custom-drawer,
@@ -114,28 +101,27 @@ button:hover {
   margin-right: 15px;
 }
 
+#principal #power-profiles-daemon.performance {
+  background-color: darker(#f53c3c);
+}
 
-/* #power-profiles-daemon.performance { */
-/*     background-color: darker(#f53c3c); */
-/* } */
-/**/
-/* #power-profiles-daemon.balanced { */
-/*     background-color: darker(#2980b9); */
-/* } */
-/**/
-/* #power-profiles-daemon.power-saver { */
-/*     background-color: darker(#2ecc71); */
-/* } */
+#principal #power-profiles-daemon.balanced {
+  background-color: darker(#2980b9);
+}
+
+#principal #power-profiles-daemon.power-saver {
+  background-color: darker(#2ecc71);
+}
 
 
-/* #network.disconnected { */
-/*     background-color: #f53c3c; */
-/* } */
-/**/
-/* #pulseaudio.muted { */
-/*     background-color: #90b1b1; */
-/*     color: #2a5c45; */
-/* } */
+#principal #network.disconnected {
+  background-color: darker(@inverse_primary);
+}
+
+#principal #pulseaudio.muted {
+  background-color: darker(#f53c3c);
+  color: @secondary;
+}
 
 #tray > .passive {
   -gtk-icon-effect: dim;
@@ -143,11 +129,11 @@ button:hover {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
+  background-color: darker(#f53c3c);
 }
 
-#idle_inhibitor.activated {
-  background-color: @on_secondary;
+#principal #idle_inhibitor.activated {
+  background-color: darker(#f53c3c);
   color: @secondary;
 }
 
