@@ -7,7 +7,6 @@
   "margin-right": 5,
   "reload_style_on_change": true,
   "width": 1344,
-  //"spacing": 10, // Gaps between modules (4px)
   "modules-left": [
     "hyprland/workspaces"
   ],
@@ -53,6 +52,7 @@
     "modules": [
       "custom/drawer",
       "idle_inhibitor",
+      "wireplumber",
       "pulseaudio",
       "network",
       "power-profiles-daemon",
@@ -179,8 +179,8 @@
     "format-source-muted": "",
     "format-icons": {
       "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "hands-free": "",
+      "headset": "",
       "phone": "",
       "portable": "",
       "car": "",
@@ -192,6 +192,21 @@
     },
     "on-click-right": "pavucontrol",
     "on-click": "~/.local/bin/audio-selector.sh"
+  },
+  "wireplumber": {
+    "format": "{icon}",
+    "tooltip-format": "{volume}% {icon} {format_source}",
+    "format-muted": "",
+    "format-source": "{source_volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "helvum"
   },
   "custom/notification": {
     "tooltip": true,
