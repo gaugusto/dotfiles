@@ -38,7 +38,7 @@ window#waybar {
 }
 
 #workspaces button {
-  background-color: @surface_bright;
+  background-color: @background;
   color: lighter(@primary);
   border-radius: 100px;
   margin: 3px 5px;
@@ -50,14 +50,16 @@ window#waybar {
   background: inherit;
   text-shadow: inherit;
 
-  background-color: darker(@inverse_primary);
+  background-color: darker(@on_background);
+  color: @background;
   min-width: 65px;
   transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: darker(@inverse_primary);
+  background-color: darker(@on_background);
+  color: @background;
   min-width: 65px;
   transition: all 0.3s ease-in-out
 }
@@ -81,8 +83,8 @@ window#waybar {
   padding: 3px 10px;
   margin: 3px 5px;
   border-radius: 100px;
-  background-color: @surface_bright;
-  color: lighter(@primary);
+  background-color: @background;
+  color: @on_background;
 }
 
 #principal #custom-drawer:hover,
@@ -93,11 +95,11 @@ window#waybar {
 #principal #cpu:hover,
 #principal #memory:hover,
 #principal #wireplumber:hover,
-#tray:hover,
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  background-color: darker(@inverse_primary);
+  background-color: darker(@on_background);
+  color: @background;
 }
 
 #custom-power {
@@ -133,6 +135,10 @@ window#waybar {
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
   background-color: darker(#f53c3c);
+}
+
+#tray menu {
+  background-color: @surface_bright;
 }
 
 #principal #idle_inhibitor.activated {
