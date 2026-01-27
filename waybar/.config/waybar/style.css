@@ -16,7 +16,7 @@
 
 tooltip {
   border-radius: 10px;
-  background-color: alpha(@background, 0.8);
+  background-color: @background;
 }
 
 tooltip label {
