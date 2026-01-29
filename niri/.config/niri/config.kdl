@@ -186,8 +186,8 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Run an Application: Walker" { spawn "walker"; }
     Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
-    Super+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
-    Super+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
+    Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
+    Mod+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri raise"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri lower"; }
@@ -328,7 +328,7 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    // Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
