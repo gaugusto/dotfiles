@@ -41,8 +41,8 @@ input {
         // middle-emulation
     }
 
-    warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="0%"
+    // warp-mouse-to-focus
+    // focus-follows-mouse max-scroll-amount="0%"
 }
 
 output "DP-1" {
@@ -50,6 +50,11 @@ output "DP-1" {
     scale 1
     transform "normal"
     position x=2560 y=0
+    focus-at-startup
+
+    hot-corners {
+      off
+    }
 }
 
 output "DP-2" {
@@ -57,6 +62,10 @@ output "DP-2" {
     scale 1
     transform "normal"
     position x=0 y=0
+
+    hot-corners {
+      off
+    }
 }
 
 layout {
@@ -69,7 +78,7 @@ layout {
     }
     default-column-width { proportion 0.5; }
     focus-ring {
-        // off
+        off
         width 3
         // active-color "#7fc8ff"
         // inactive-color "#505050"
@@ -79,13 +88,13 @@ layout {
     }
 
     border {
-        off
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        on
+        width 3
+        // active-color "#ffc87f"
+        // inactive-color "#505050"
         urgent-color "#9b0000"
-        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     shadow {
@@ -96,12 +105,12 @@ layout {
         color "#0007"
     }
 
-    struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
-    }
+    // struts {
+    //     left 14
+    //     right 14
+    //     top 14
+    //     bottom 14
+    // }
 }
 
 hotkey-overlay {
@@ -115,7 +124,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
     // off
-    // slowdown 3.0
+    slowdown 3.0
 }
 
 window-rule {
@@ -142,24 +151,53 @@ window-rule {
     clip-to-geometry true
 }
 
+window-rule {
+    // Filtra pela ID do app (geralmente 'steam' no Wayland/XWayland)
+    match app-id="^org.proweb.steam$"
+    match app-id="^steam$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="^gamescope$"
+    open-on-output "DP-1"
+    open-fullscreen true
+}
+
+layer-rule {
+    match namespace="walker"
+    match namespace="waybar"
+
+    shadow {
+        on
+        // off
+        softness 40
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000064"
+        // inactive-color "#00000064"
+    }
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Run an Application: Walker" { spawn "walker"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
+    Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
     Super+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
     Super+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri raise"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri lower"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle output"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle input"; }
 
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "swayosd-client --playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "swayosd-client --playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "swayosd-client --playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "swayosd-client --playerctl next"; }
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
