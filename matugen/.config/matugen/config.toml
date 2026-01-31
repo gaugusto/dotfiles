@@ -8,6 +8,11 @@ input_path = './templates/hyprland-colors.conf'
 output_path = '~/.config/matugen/output/hyprland_colors.conf'
 post_hook = 'hyprctl reload config-only -q'
 
+[templates.niri]
+input_path = './templates/niri-colors.kdl'
+output_path = '~/.config/niri/colors.kdl'
+post_hook = 'niri msg action load-config-file'
+
 [templates.waybar]
 input_path = './templates/colors.conf'
 output_path = '~/.config/matugen/output/waybar_colors.css'
@@ -17,6 +22,10 @@ post_hook = 'pkill -SIGUSR2 waybar & pkill -SIGUSR2 swaync'
 input_path = './templates/kitty-colors.conf'
 output_path = '~/.config/matugen/output/kitty_colors.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.alacritty]
+input_path = './templates/alacritty.toml'
+output_path = '~/.config/alacritty/themes/matugen.toml'
 
 # [templates.wlogout]
 # input_path = './templates/colors.css'

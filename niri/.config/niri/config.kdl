@@ -78,7 +78,7 @@ layout {
     }
     default-column-width { proportion 0.5; }
     focus-ring {
-        on
+        off
         width 3
         // active-color "#7fc8ff"
         // inactive-color "#505050"
@@ -88,13 +88,13 @@ layout {
     }
 
     border {
-        off
+        on
         width 3
         // active-color "#ffc87f"
         // inactive-color "#505050"
-        urgent-color "#f38ba8"
-        active-gradient from="#cba6f7" to="#f5c2e7" angle=45 relative-to="workspace-view" in="oklch longer hue"
-        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        // urgent-color "#f38ba8"
+        // active-gradient from="#cba6f7" to="#f5c2e7" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     shadow {
@@ -125,6 +125,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
     // off
     slowdown 3.0
+}
+
+window-rule {
+    open-maximized false
+    default-column-width { proportion 0.5; }
 }
 
 window-rule {
@@ -183,46 +188,26 @@ layer-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    // Noctalia - Core binds
-    Mod+Space hotkey-overlay-title="Open launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    Mod+Ctrl+S hotkey-overlay-title="Open Control Center" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
-    Mod+Ctrl+Comma hotkey-overlay-title="Open settings" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    Mod+Escape hotkey-overlay-title="Session menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
-    Mod+Ctrl+Alt+B hotkey-overlay-title="Choose wallpaper" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
-    Mod+Ctrl+B hotkey-overlay-title="Wallpaper random" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "random"; }
-
-    // Noctalia - Audio controls
-    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
-    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
-    XF86AudioMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
-
-    // Noctalia -  Brightness controls
-    XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
-
-    // Noctalia -  Utility shortcuts
-    Mod+Ctrl+V hotkey-overlay-title="Launch clipboard" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
-    Mod+Ctrl+L  hotkey-overlay-title="Lock screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
-
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+B hotkey-overlay-title="Open a Browser: chromium" { spawn "chromium"; }
     Mod+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
-    // Mod+Space hotkey-overlay-title="Run an Application: Walker" { spawn "walker"; }
-    // Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
-    // Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
-    //
-    // XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri raise"; }
-    // XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri lower"; }
-    // XF86AudioMute        allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle output"; }
-    // XF86AudioMicMute     allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle input"; }
-    //
-    // XF86AudioPlay        allow-when-locked=true { spawn-sh "swayosd-client --playerctl play-pause"; }
-    // XF86AudioStop        allow-when-locked=true { spawn-sh "swayosd-client --playerctl stop"; }
-    // XF86AudioPrev        allow-when-locked=true { spawn-sh "swayosd-client --playerctl previous"; }
-    // XF86AudioNext        allow-when-locked=true { spawn-sh "swayosd-client --playerctl next"; }
-    //
-    // XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    Mod+Space hotkey-overlay-title="Run an Application: Walker" { spawn "walker"; }
+    Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
+    Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
+    Mod+Alt+N hotkey-overlay-title="Nofifications" { spawn "swaync-client" "-t" "-sw"; }
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri raise"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri lower"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle output"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle input"; }
+
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "swayosd-client --playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "swayosd-client --playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "swayosd-client --playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "swayosd-client --playerctl next"; }
+
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     Mod+O repeat=false { toggle-overview; }
 
@@ -357,3 +342,5 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 }
+
+include "./colors.kdl"
