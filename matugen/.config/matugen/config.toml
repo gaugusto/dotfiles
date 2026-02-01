@@ -27,9 +27,9 @@ post_hook = 'pkill -SIGUSR1 kitty'
 input_path = './templates/alacritty.toml'
 output_path = '~/.config/alacritty/themes/matugen.toml'
 
-# [templates.wlogout]
-# input_path = './templates/colors.css'
-# output_path = '~/.config/matugen/output/wlogout_colors.css'
+[templates.sway]
+input_path = './templates/sway-colors.conf'
+output_path = '~/.config/matugen/output/sway_colors.conf'
 
 [templates.rofi]
 input_path = './templates/rofi.rasi'
@@ -43,10 +43,10 @@ output_path = '~/.config/btop/themes/matugen.theme'
 
 [templates.gtk3]
 input_path = './templates/gtk-colors.css'
-output_path = '~/.config/gtk-3.0/gtk-dark.css'
+output_path = '~/.config/gtk-3.0/colors.css'
 post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
 
 [templates.gtk4]
 input_path = './templates/gtk-colors.css'
-output_path = '~/.config/gtk-4.0/gtk-dark.css'
+output_path = '~/.config/gtk-4.0/colors.css'
 post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme Adwaita-{{mode}}'

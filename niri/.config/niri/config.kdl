@@ -25,7 +25,7 @@ input {
     mouse {
         // off
         // natural-scroll
-        // accel-speed 0.2
+        accel-speed 0.9
         // accel-profile "flat"
         // scroll-method "no-scroll"
     }
@@ -190,11 +190,16 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+B hotkey-overlay-title="Open a Browser: chromium" { spawn "chromium"; }
-    Mod+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
     Mod+Space hotkey-overlay-title="Run an Application: Walker" { spawn "walker"; }
-    Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
-    Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
     Mod+Alt+N hotkey-overlay-title="Nofifications" { spawn "swaync-client" "-t" "-sw"; }
+
+    // Scripts
+    Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
+    Mod+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
+    Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
+    Mod+Ctrl+Alt+C hotkey-overlay-title="Cliphist" { spawn "~/.local/bin/cliphist.sh"; }
+    Mod+Ctrl+Alt+R hotkey-overlay-title="Random Wallpaper" { spawn "~/.local/bin/wall-random.sh"; }
+    Mod+Ctrl+Alt+B hotkey-overlay-title="Choose Wallpaper" { spawn "~/.local/bin/wallset.sh"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri raise"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri lower"; }
@@ -313,7 +318,7 @@ binds {
 
     Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
+    
 
     Mod+Ctrl+C { center-visible-columns; }
 
