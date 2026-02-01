@@ -39,7 +39,7 @@ window#waybar {
 
 #workspaces button {
   background-color: @background;
-  color: lighter(@primary);
+  color: @on_background;
   border-radius: 100px;
   margin: 3px 5px;
   min-width: 30px;
@@ -50,16 +50,16 @@ window#waybar {
   background: inherit;
   text-shadow: inherit;
 
-  background-color: darker(@on_background);
-  color: @background;
+  background-color: darker(@on_secondary);
+  color: lighter(@secondary);
   min-width: 65px;
   transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: darker(@on_background);
-  color: @background;
+  background-color: darker(@on_secondary);
+  color: @on_background;
   min-width: 65px;
   transition: all 0.3s ease-in-out
 }
@@ -98,8 +98,8 @@ window#waybar {
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  background-color: darker(@on_background);
-  color: @background;
+  background-color: darker(@on_secondary);
+  color: lighter(@secondary);
 }
 
 #custom-power {
