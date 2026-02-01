@@ -213,7 +213,7 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "~/.local/bin/logout-menu.sh"
+    "on-click": "~/.local/bin/session-menu.sh"
   },
   "custom/drawer": {
     "format": "󰇘",

@@ -4,28 +4,36 @@
 set -e
 
 PACKAGES=(
-  adapta-gtk-theme
-  adw-gtk-theme
+  7zip
+  alacritty
   alsa-utils
   amd-ucode
-  arc-gtk-theme
   archlinux-wallpaper
-  asciiquarium
   baobab
   base
+  base-devel
+  bash-completion
   bat
-  bazaar
   blueman
+  bluez
   bluez-utils
   brightnessctl
   btop
+  btrfs-progs
   cantarell-fonts
+  cava
+  chafa
   chaotic-keyring
   chaotic-mirrorlist
+  chromium
   cliphist
+  cmake
   cmatrix
   cnijfilter2
+  cpio
+  cups
   dconf-editor
+  dosfstools
   edk2-shell
   efibootmgr
   elephant
@@ -38,85 +46,157 @@ PACKAGES=(
   elephant-symbols
   elephant-unicode
   elephant-windows
+  evince
+  exfatprogs
   eza
   fastfetch
+  fd
+  firefox
+  flatpak
+  freetube
+  fzf
   gamemode
+  gamescope
   gemini-cli
-  gnome-boxes
+  git
   gnome-calculator
   gnome-disk-utility
+  gnome-keyring
   gnome-software
+  gnome-system-monitor
+  gpart
   gparted
+  greetd
+  greetd-regreet
+  gst-libav
+  gst-plugin-pipewire
   gst-plugin-va
+  gst-plugins-bad
+  gst-plugins-base
+  gst-plugins-ugly
   helvum
   htop
+  hunspell-pt-br
   hypridle
+  hyprland
   hyprlauncher
   hyprlock
   hyprpaper
+  hyprpicker
   hyprshot
+  hyprsunset
   kitty
   lazygit
+  less
+  lib32-gamemode
+  libpulse
   libratbag
   libva-nvidia-driver
   libva-utils
+  linux
+  linux-firmware
+  linux-headers
   linux-zen
+  linux-zen-headers
+  loupe
+  lsof
   lua51
   luarocks
+  man-db
   mangohud
-  materia-gtk-theme
   matugen
+  mc
   mesa-utils
+  meson
   mpv
+  mtools
+  nautilus
   nautilus-image-converter
   nautilus-open-any-terminal
+  neovim
+  networkmanager
   networkmanager-dmenu
+  niri
   nitch
+  nm-connection-editor
+  noto-fonts-emoji
+  npm
+  ntfs-3g
   nvidia-open-dkms
+  nvidia-settings
   nvtop
   nwg-look
   pacman-contrib
   pass
   pavucontrol
+  pipewire
+  pipewire-alsa
+  pipewire-jack
+  pipewire-pulse
+  plymouth
   plymouth-theme-catppuccin-mocha-git
   polkit-gnome
   power-profiles-daemon
+  python-aiohttp-oauthlib
   qpwgraph
   qt6ct
-  rofimoji
+  ripgrep
+  rofi
   rygel
   sbctl
+  shadps4-git
+  shadps4-qtlauncher-git
+  speech-dispatcher
   spotify-launcher
   starship
   steam
   stow
+  strace
+  swayidle
+  swaylock
   swaync
   swayosd
   swww
+  systemd-ukify
+  timeshift
   transmission-cli
+  trash-cli
   tree-sitter-cli
+  ttf-0xproto-nerd
+  ttf-cascadia-code-nerd
+  ttf-cascadia-mono-nerd
   ttf-jetbrains-mono
+  ttf-jetbrains-mono-nerd
+  ttf-meslo-nerd
+  tumbler
+  udftools
   ufw
+  uwsm
+  vdirsyncer
   vdpauinfo
   ventoy-bin
+  vim
+  virtualbox
+  virtualbox-guest-iso
+  virtualbox-guest-utils-nox
   vscodium
   vulkan-tools
   walker
   waybar
   wget
-  wlogout
+  wireplumber
+  wlctl-bin
+  wlsunset
+  wofi
+  xdg-desktop-portal-gtk
+  xdg-desktop-portal-hyprland
+  xorg-xhost
+  xwayland-satellite
   yay
   yazi
+  yt-dlp
   zram-generator
-
-  flatpak
-  greetd
-  gredtd-regreet
-  bash-completion
-  timeshift
-  vim
-  wlctl-bin
-  ripgrep
+  zsh
 )
 
 sudo pacman -Syy

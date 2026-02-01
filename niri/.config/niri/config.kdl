@@ -194,9 +194,9 @@ binds {
     Mod+Alt+N hotkey-overlay-title="Nofifications" { spawn "swaync-client" "-t" "-sw"; }
 
     // Scripts
-    Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "~/.local/bin/swaylock.sh"; }
+    Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "hyprlock"; }
     Mod+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
-    Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/logout-menu.sh"; }
+    Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/session-menu.sh"; }
     Mod+Ctrl+Alt+C hotkey-overlay-title="Cliphist" { spawn "~/.local/bin/cliphist.sh"; }
     Mod+Ctrl+Alt+R hotkey-overlay-title="Random Wallpaper" { spawn "~/.local/bin/wall-random.sh"; }
     Mod+Ctrl+Alt+B hotkey-overlay-title="Choose Wallpaper" { spawn "~/.local/bin/wallset.sh"; }
@@ -348,4 +348,4 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
-include "./colors.kdl"
+include "colors.kdl"
