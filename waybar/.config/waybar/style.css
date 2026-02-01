@@ -38,8 +38,8 @@ window#waybar {
 }
 
 #workspaces button {
-  background-color: @background;
-  color: @on_background;
+  background-color: darker(@on_secondary);
+  color: lighter(@secondary);
   border-radius: 100px;
   margin: 3px 5px;
   min-width: 30px;
@@ -50,15 +50,15 @@ window#waybar {
   background: inherit;
   text-shadow: inherit;
 
-  background-color: darker(@on_secondary);
-  color: lighter(@secondary);
+  background-color: @background;
+  color: @on_background;
   min-width: 65px;
   transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: darker(@on_secondary);
+  background-color: @background;
   color: @on_background;
   min-width: 65px;
   transition: all 0.3s ease-in-out
@@ -83,8 +83,10 @@ window#waybar {
   padding: 3px 10px;
   margin: 3px 5px;
   border-radius: 100px;
-  background-color: @background;
-  color: @on_background;
+  /* background-color: @background; */
+  /* color: @on_background; */
+  background-color: darker(@on_secondary);
+  color: lighter(@secondary);
 }
 
 #principal #custom-drawer:hover,
@@ -98,8 +100,10 @@ window#waybar {
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  background-color: darker(@on_secondary);
-  color: lighter(@secondary);
+  /* background-color: darker(@on_secondary); */
+  /* color: lighter(@secondary); */  
+  background-color: @background;
+  color: @on_background;
 }
 
 #custom-power {
