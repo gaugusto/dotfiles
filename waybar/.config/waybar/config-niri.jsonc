@@ -71,7 +71,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": "  {:%H:%M 󰇙  %a, %d %b %Y}",
+    "format": "{:%H:%M 󰇙 %a, %d %b %Y}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
