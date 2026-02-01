@@ -188,13 +188,14 @@ layer-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    // Apps
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+B hotkey-overlay-title="Open a Browser: chromium" { spawn "chromium"; }
     Mod+Space hotkey-overlay-title="Run an Application: Walker" { spawn "walker"; }
     Mod+Alt+N hotkey-overlay-title="Nofifications" { spawn "swaync-client" "-t" "-sw"; }
 
     // Scripts
-    Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "hyprlock"; }
+    Mod+Shift+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "hyprlock"; }
     Mod+D hotkey-overlay-title="My d-menus" { spawn "~/.local/bin/dmenu_scripts"; }
     Mod+Escape hotkey-overlay-title="Poweroff menu" { spawn "~/.local/bin/session-menu.sh"; }
     Mod+Ctrl+Alt+C hotkey-overlay-title="Cliphist" { spawn "~/.local/bin/cliphist.sh"; }
@@ -218,42 +219,33 @@ binds {
 
     Mod+Q repeat=false { close-window; }
 
-    Mod+H     { focus-column-left; }
-    // Mod+J     { focus-window-down; }
-    // Mod+K     { focus-window-up; }
-    Mod+J     { focus-window-or-workspace-down; }
-    Mod+K     { focus-window-or-workspace-up; }
-    Mod+L     { focus-column-right; }
+    Mod+H          { focus-column-left; }
+    Mod+J          { focus-window-or-workspace-down; }
+    Mod+K          { focus-window-or-workspace-up; }
+    Mod+L          { focus-column-right; }
 
-    Mod+Shift+H     { move-column-left; }
-    // Mod+Shift+J     { move-window-down; }
-    // Mod+Shift+K     { move-window-up; }
+    Mod+Ctrl+H     { move-column-left; }
+    Mod+Ctrl+L     { move-column-right; }
     Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
     Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
-    Mod+Shift+L     { move-column-right; }
 
-    Mod+Home { focus-column-first; }
-    Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { move-column-to-first; }
-    Mod+Ctrl+End  { move-column-to-last; }
+    Mod+Alt+H      { focus-monitor-left; }
+    Mod+Alt+J      { focus-monitor-down; }
+    Mod+Alt+K      { focus-monitor-up; }
+    Mod+Alt+L      { focus-monitor-right; }
 
-    Mod+Alt+H     { focus-monitor-left; }
-    Mod+Alt+J     { focus-monitor-down; }
-    Mod+Alt+K     { focus-monitor-up; }
-    Mod+Alt+L     { focus-monitor-right; }
-
-    Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+    Mod+Ctrl+Alt+H { move-column-to-monitor-left; }
+    Mod+Ctrl+Alt+J { move-column-to-monitor-down; }
+    Mod+Ctrl+Alt+K { move-column-to-monitor-up; }
+    Mod+Ctrl+Alt+L { move-column-to-monitor-right; }
 
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
 
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
-    Mod+Shift+U         { move-column-to-workspace-down; }
-    Mod+Shift+I         { move-column-to-workspace-up; }
+    // Mod+U              { focus-workspace-down; }
+    // Mod+I              { focus-workspace-up; }
+    // Mod+Shift+U         { move-column-to-workspace-down; }
+    // Mod+Shift+I         { move-column-to-workspace-up; }
 
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
 
@@ -267,10 +259,10 @@ binds {
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
-    Mod+WheelScrollRight      { focus-column-right; }
-    Mod+WheelScrollLeft       { focus-column-left; }
-    Mod+Ctrl+WheelScrollRight { move-column-right; }
-    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+    Mod+WheelScrollRight           { focus-column-right; }
+    Mod+WheelScrollLeft            { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight      { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft       { move-column-left; }
 
     Mod+Shift+WheelScrollDown      { focus-column-right; }
     Mod+Shift+WheelScrollUp        { focus-column-left; }

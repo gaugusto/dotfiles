@@ -70,8 +70,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{:%a, %d %b %Y | %H:%M}",
-    "format-alt": "{:%I:%M %p - %Y-%m-%d}",
+    "format": "{:%H:%M 󰇙 %a, %d %b %Y}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
@@ -216,7 +215,7 @@
     "on-click": "~/.local/bin/session-menu.sh"
   },
   "custom/drawer": {
-    "format": "󰇘",
+    "format": "󰳝",
     "interval": 0
   }
 }
