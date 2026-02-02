@@ -44,7 +44,6 @@
 
 .notification-default-action:hover,
 .notification-action:hover {
-  -gtk-icon-effect: none;
   border-radius: var(--border-radius);
   background-color: darker(@on_secondary);
   color: darker(@secondary);
