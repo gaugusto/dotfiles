@@ -21,7 +21,7 @@ $lock)
   hyprlock
   ;;
 $logout)
-  hyprctl dispatch exit
+  systemctl --user exit
   ;;
 $suspend)
   systemctl suspend
