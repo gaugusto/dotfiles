@@ -117,9 +117,11 @@ hotkey-overlay {
     skip-at-startup
 }
 
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
 prefer-no-csd
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
 animations {
@@ -202,17 +204,17 @@ binds {
     Mod+Ctrl+Alt+R hotkey-overlay-title="Random Wallpaper" { spawn "~/.local/bin/wall-random.sh"; }
     Mod+Ctrl+Alt+B hotkey-overlay-title="Choose Wallpaper" { spawn "~/.local/bin/wallset.sh"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri raise"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri lower"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle output"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle input"; }
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri raise"; }
+    XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri lower"; }
+    XF86AudioMute         allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle output"; }
+    XF86AudioMicMute      allow-when-locked=true { spawn-sh "~/.local/bin/vol-control.sh --composer niri mute-toggle input"; }
 
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "swayosd-client --playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "swayosd-client --playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "swayosd-client --playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "swayosd-client --playerctl next"; }
+    XF86AudioPlay         allow-when-locked=true { spawn-sh "swayosd-client --playerctl play-pause"; }
+    XF86AudioStop         allow-when-locked=true { spawn-sh "swayosd-client --playerctl stop"; }
+    XF86AudioPrev         allow-when-locked=true { spawn-sh "swayosd-client --playerctl previous"; }
+    XF86AudioNext         allow-when-locked=true { spawn-sh "swayosd-client --playerctl next"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     Mod+O repeat=false { toggle-overview; }
@@ -309,8 +311,6 @@ binds {
     Mod+Shift+F { fullscreen-window; }
 
     Mod+Ctrl+F { expand-column-to-available-width; }
-
-    
 
     Mod+Ctrl+C { center-visible-columns; }
 
