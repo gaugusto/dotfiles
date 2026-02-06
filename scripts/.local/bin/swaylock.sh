@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Cores Catppuccin Mocha
 rosewater="f5e0dc"

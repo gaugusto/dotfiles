@@ -27,7 +27,6 @@ tooltip label {
 
 window#waybar {
   background-color: alpha(@surface, 0.6);
-  /* background-color: transparent; */
   border-radius: 100px;
   border: none;
 }
@@ -66,7 +65,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  background-color: darker(#f53c3c);
+  background-color: darker(@error_container);
 }
 
 #principal #custom-drawer,
@@ -84,8 +83,6 @@ window#waybar {
   padding: 3px 10px;
   margin: 3px 5px;
   border-radius: 100px;
-  /* background-color: @background; */
-  /* color: @on_background; */
   background-color: darker(@on_secondary);
   color: lighter(@secondary);
 }
@@ -101,8 +98,6 @@ window#waybar {
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  /* background-color: darker(@on_secondary); */
-  /* color: lighter(@secondary); */  
   background-color: @background;
   color: @on_background;
 }
@@ -112,15 +107,15 @@ window#waybar {
 }
 
 #principal #power-profiles-daemon.performance {
-  background-color: darker(#f53c3c);
+  background-color: @on_primary;
 }
 
 #principal #power-profiles-daemon.balanced {
-  background-color: darker(#2980b9);
+  background-color: @on_secondary;
 }
 
 #principal #power-profiles-daemon.power-saver {
-  background-color: darker(#2ecc71);
+  background-color: @on_tertiary;
 }
 
 
@@ -147,7 +142,7 @@ window#waybar {
 }
 
 #principal #idle_inhibitor.activated {
-  background-color: darker(#f53c3c);
+  background-color: @on_primary;
   color: @secondary;
 }
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 1. Obtém os dados via pactl e formata para o Rofi (Descrição | Nome Técnico)
 # Usamos o "|" como separador para facilitar o 'cut' depois

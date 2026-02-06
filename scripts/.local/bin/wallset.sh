@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bashu
 
 WALL_DIR="$HOME/.config/backgrounds"
 
